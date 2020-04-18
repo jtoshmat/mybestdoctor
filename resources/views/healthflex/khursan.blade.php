@@ -177,7 +177,7 @@
         <div class="head_panel skincolored_section diagonal-bgcolor-trans">
             <div class="diagonal_headings_layout">
                 <div class="hgroup">
-                    <div class="title diagonal-bgcolor-trans body-bg_section   ">
+                    <div class="title diagonal-bgcolor-trans body-bg_section">
                         <div class="container">
                             <h1>Appointment</h1>
                         </div>
