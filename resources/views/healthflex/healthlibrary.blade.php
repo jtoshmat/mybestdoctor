@@ -659,6 +659,8 @@
         c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
         document.body.className = c;
     </script>
+    <!-- Slick JS -->
+
     <script type='text/javascript'>
         /* <![CDATA[ */
         var wpcf7 = {"apiSettings":{"root":"https:\/\/plethorathemes.com\/healthflex\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};

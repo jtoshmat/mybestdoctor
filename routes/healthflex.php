@@ -77,4 +77,5 @@ Route::get('/blank', function () {
 });
 Route::get('/sherzod', 'PublicController@sherzod');
 Route::get('/khursan', 'PublicController@khursan');
+Route::get('/khursand', 'PublicController@khursand');
 

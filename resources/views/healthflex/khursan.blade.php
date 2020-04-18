@@ -41,7 +41,7 @@
                     <div class="logo">
                         <a href="/" class="brand">
                             <img
-                                src="https://plethorathemes.com/healthflex/wp-content/uploads/2013/06/healthflex_logo_color.png"
+                                src="healthflex_files/logo.png"
                                 alt="HealthFlex">
                         </a>
                     </div>
@@ -213,7 +213,7 @@
 
                                 @include('healthflex.include.khursan')
                                 <div class="-border myform">
-                                    <img src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3632453/910/607/m1/fpnw/wm0/1-.png?1511530520&s=77bae50c165f67c57a0adce4c19a2fb6">
+                                    <img src="healthflex_files/logo.png">
                                     <br><p><b>Book My best doctor</b></p>
                                     <form>
                                         <input placeholder="doctor name" type="text" method="post">
@@ -245,11 +245,7 @@
                                             </div>
                                         </div>
                                         <button>Find</button>
-
                                     </form>
-
-
-
                                 </div>
                                 <hr>
                                 <table class="table-info table">
@@ -304,162 +300,7 @@
             </section>
 
         </div>
-        <footer class="sep_angled_positive_top separator_top ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <!-- ========================== WIDGET ABOUT US ==========================-->
 
-                        <aside id="plethora-aboutus-widget-1" class="widget aboutus-widget">
-
-                            <div class="pl_about_us_widget  ">
-
-                                <p>
-                                    <img
-                                        src="https://plethorathemes.com/healthflex/wp-content/uploads/2013/06/healthflex_logo_white.png"
-                                        alt="" style="max-width:"></p>
-
-
-                                <p>Premium Wordpress Theme mainly Medical Oriented but so flexible that lets you build
-                                    various layouts for any "Health & Beauty" related business!</p>
-
-
-                                <p class='contact_detail'><a href='tel:(+30) 210 1234567'><i
-                                            class='fa fa-phone'></i></a><span><a href='tel:(+30) 210 1234567'>(+30) 210 1234567</a></span>
-                                </p>
-
-
-                                <p class='contact_detail'><a href='mailto:info@plethorathemes.com'><i
-                                            class='fa fa-envelope'></i></a><span><a
-                                            href='mailto:info@plethorathemes.com'>info@plethorathemes.com</a></span></p>
-
-
-                                <p class="contact_detail">
-                                    <a href='https://www.google.com/maps/place/79+Folsom+St,+San+Francisco,+CA+94105,+USA/@37.7902642,-122.3929651,17z/data=!3m1!4b1!4m2!3m1!1s0x8085807aad0a9e0b:0x378e593dff7a2ac3?hl=en'
-                                       target='_blank'>
-                                        <i class='fa fa-location-arrow'></i>
-                                    </a>
-                                    <span><a
-                                            href='https://www.google.com/maps/place/79+Folsom+St,+San+Francisco,+CA+94105,+USA/@37.7902642,-122.3929651,17z/data=!3m1!4b1!4m2!3m1!1s0x8085807aad0a9e0b:0x378e593dff7a2ac3?hl=en'
-                                            target='_blank'>79 Folsom Ave, San Francisco, CA 94107</a></span>
-                                </p>
-
-
-                            </div>
-
-                        </aside>
-
-                        <!-- END======================= WIDGET ABOUT US ==========================--></div>
-                    <div class="col-sm-6 col-md-3">
-                        <aside id="nav_menu-2" class="widget widget_nav_menu"><h4>Quick Links</h4>
-                            <div class="menu-quick-links-container">
-                                <ul id="menu-quick-links" class="menu">
-                                    <li id="menu-item-1784"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1784">
-                                        <a href="/services/">All Medical Services</a></li>
-                                    <li id="menu-item-1785"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1785">
-                                        <a href="/appointment-booking/">Appointment Booking</a></li>
-                                    <li id="menu-item-1786"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1786">
-                                        <a href="/faq/">FAQ</a></li>
-                                    <li id="menu-item-1787"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1787">
-                                        <a href="/fees-insurance/">Fees &amp; Insurance</a></li>
-                                    <li id="menu-item-1788"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1788">
-                                        <a href="/health-library/">Health Library A-Z</a></li>
-                                    <li id="menu-item-1755"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755">
-                                        <a href="/shop/">Shop</a></li>
-                                    <li id="menu-item-1791"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1791">
-                                        <a href="/free-checkup-offer/">Free Checkup Offer</a></li>
-                                </ul>
-                            </div>
-                        </aside><!-- ========================== WIDGET ABOUT US ==========================-->
-
-                        <aside id="plethora-aboutus-widget-2" class="widget aboutus-widget">
-
-                            <div class="pl_about_us_widget  ">
-
-
-                                <p class="social">
-
-                                    <a href='#' target='_blank' title="Twitter"><i class='fa fa-twitter'></i></a>
-                                    <a href='#' target='_blank' title="Facebook"><i class='fa fa-facebook'></i></a>
-                                    <a href='#' target='_blank' title="Google+"><i class='fa fa-google-plus'></i></a>
-                                    <a href='#' target='_blank' title="LinkedIn"><i class='fa fa-linkedin'></i></a>
-                                    <a href='#' target='_blank' title="Skype"><i class='fa fa-skype'></i></a>
-                                    <a href='#' target='_blank' title="Send Us An Email"><i class='fa fa-envelope'></i></a>
-                                </p>
-
-
-                            </div>
-
-                        </aside>
-
-                        <!-- END======================= WIDGET ABOUT US ==========================--></div>
-                    <div class="col-sm-6 col-md-3">
-                        <!-- ===================== LATEST NEWS: MUSTACHE ========================-->
-
-                        <aside id="plethora-latestnews-widget-1" class="widget latestnews-widget">
-
-                            <div class="pl_latest_news_widget">
-                                <h4>Latest News </h4>
-                                <ul class="media-list">
-
-                                    <li class="media">
-
-                                        <a href="/blog/2015/11/23/daily-exercise-is-essential-for-your-health/"
-                                           class="media-photo"
-                                           style="background-image:url(' https://plethorathemes.com/healthflex/wp-content/uploads/2015/11/woman_running-150x150.jpg ')"></a>
-
-                                        <h5 class="media-heading">
-                                            <a href="/blog/2015/11/23/daily-exercise-is-essential-for-your-health/">Daily
-                                                Exercise is essential</a>
-                                            <small>Nov 23</small>
-                                        </h5>
-                                        <p>When was the last time you went out for a...</p>
-                                    </li>
-
-
-                                    <li class="media">
-
-                                        <a href="/blog/2015/09/30/medical-advice/" class="media-photo"
-                                           style="background-image:url(' https://plethorathemes.com/healthflex/wp-content/uploads/2015/09/blog-pills-150x150.jpg ')"></a>
-
-                                        <h5 class="media-heading">
-                                            <a href="/blog/2015/09/30/medical-advice/">Medical Advice for all ages and
-                                                sexes</a>
-                                            <small>Sep 30</small>
-                                        </h5>
-                                        <p>How often does a post start with all these words? Allergy...</p>
-                                    </li>
-
-
-                                    <li class="media">
-
-                                        <a href="/blog/2015/09/30/diabetes-diet-and-food-tips/" class="media-photo"
-                                           style="background-image:url(' https://plethorathemes.com/healthflex/wp-content/uploads/2015/09/blog-salad-150x150.jpg ')"></a>
-
-                                        <h5 class="media-heading">
-                                            <a href="/blog/2015/09/30/diabetes-diet-and-food-tips/">Diabetes Diet and
-                                                Healthy Food Tips</a>
-                                            <small>Sep 30</small>
-                                        </h5>
-                                        <p>Let&#8217;s talk about what is health and how can this...</p>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </aside>
-
-                        <!-- END================== LATEST NEWS: MUSTACHE ========================--></div>
-                </div>
-            </div>
-        </footer>
         <div class="copyright dark_section">
             <div class="dark_section transparent_film">
                 <div class="container">
@@ -474,158 +315,15 @@
             </div>
         </div>
     </div>
-    <style>
-        .myform{
-            background-color: white;
-            width: 600px;
-            height: 800px;
-            padding: 50px;
-        }
-        .myform img{
-            width: 200px;
-            height: 100px;
-        }
-        .myform p{
-            font-size: 30px;
-            color: #02244a;
-        }
-        .myform input{
-            width: 100%;
-            height: 50px;
-            font-size: 20px;
-            padding-left: 40px;
-        }
-        .myform button{
-            width: 100%;
-            height: 50px;
-            font-size: 25px;
-            background-color: #31486f;
-            color: white;
-        }
-        .myform button:hover{
-            background-color: #4bacfc;
-            color: white;
-        }
-        .myform i{
-            font-size: 20px;
-            position: relative;
-            left: 15px;
-            top: -40px;
-            opacity: 50%;
-        }
-        .dropdown{
-            background-color: white;
-            box-shadow: 1px 1px 1px 1px grey;
-            position: absolute;
-            padding: 20px;
-            z-index: 10;
-            width: 500px;
-            display: none;
 
-        }
-        #div{
-            border: 1px solid grey;
-            height: 42px;
-        }
-        #div1{
-            text-align: center;
-            color:white;
-            font-size: 20px;
-            padding: 5px;
-            float: left;
-            background-color: blue;
-            width: 221px;
-            height: 40px;
-        }
-        #div2{
-            float: left;
-            width: 0px;
-            height: 0px;
-            border-left: 16px solid blue;
-            border-bottom: 20px solid white;
-            border-top: 20px solid white;
-
-        }
-        #div3{
-            text-align: center;
-            color:grey;
-            font-size: 20px;
-            padding: 5px;
-            float: left;
-            background-color: white;
-            width: 221px;
-            height: 40px;
-        }
-        #div4{
-            max-width: 250px;
-            color: grey;
-            font-size: 20px;
-        }
-        #div5{
-            max-width: 250px;
-            color: grey;
-            font-size: 20px;
-        }
-        #div6{
-
-        }
-        #div7{
-            display: none;
-        }
-        .div{
-            max-width: 250px;
-            font-size: 20px;
-            color: grey;
-        }
-        .doc_picture{
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: white;
-        }
-        .table span{
-            display: inline-flex;
-            margin-top: 30px;
-        }
-
-
-    </style>
     <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
     <script type="text/html" id="wpb-modifications"></script>
     <script type="text/javascript">
-        function healthCareOpt(){
-            document.getElementById('healthCareOpt').style.display='block';
-            document.getElementById('div6').style.display='block';
-            document.getElementById('div7').style.display='none';
-            document.getElementById('div3').style.backgroundColor='white';
-            document.getElementById('div3').style.color='black';
-            document.getElementById('div2').style.borderBottom='20px solid white';
-            document.getElementById('div2').style.borderTop='20px solid white';
-            document.getElementById('div2').style.borderLeft='16px solid blue';
-            document.getElementById('div1').style.backgroundColor='blue';
-            document.getElementById('div1').style.color='white';
-        };
-        function chooseHealthCare() {
-            document.getElementById('div4').innerHTML=document.getElementById('op1').innerHTML+'-';
-            document.getElementById('div6').style.display='none';
-            document.getElementById('div7').style.display='block';
-            document.getElementById('div3').style.backgroundColor='blue';
-            document.getElementById('div3').style.color='white';
-            document.getElementById('div2').style.borderBottom='20px solid blue';
-            document.getElementById('div2').style.borderTop='20px solid blue';
-            document.getElementById('div2').style.borderLeft='16px solid white';
-            document.getElementById('div1').style.backgroundColor='white';
-            document.getElementById('div1').style.color='grey';
-        }
-        function choosePlan() {
-            document.getElementById('insurance').value=document.getElementById('div4').innerHTML+document.getElementById('plan1').innerHTML;
-            document.getElementById('healthCareOpt').style.display='none';
-        }
-
         var c = document.body.className;
         c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
         document.body.className = c;
     </script>
+
     @include('healthflex.allcssfiles')
     @include('healthflex.alljavascriptfiles')
     </body>

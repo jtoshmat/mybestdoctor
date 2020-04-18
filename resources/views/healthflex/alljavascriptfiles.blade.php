@@ -53,3 +53,9 @@
 <script type="text/javascript">
     jQuery(function($) { "use strict"; $(window).load(function(){ $.fn.twentytwenty && $('.twentytwenty-container') && $('.twentytwenty-container').twentytwenty({ default_offset_pct: 0.5, orientation: 'horizontal' }); }); });
 </script>
+<!-- Slick JS -->
+<script src="/healthflex_files/assets/js/slick.js"></script>
+<!-- Custom JS -->
+<script src="/healthflex_files/assets/js/script.js"></script>
+<script src="/healthflex_files/khursan.js"></script>
+

@@ -99,6 +99,13 @@
             padding: 0 !important;
         }
     </style>
+    <link rel="stylesheet" href="healthflex_files/assets/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="healthflex_files/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="healthflex_files/assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="healthflex_files/assets/css/style.css">
     <link rel="stylesheet" id="wp-block-library-css" href="healthflex_files/style.min.css" type="text/css"
           media="all">
     <link rel="stylesheet" id="wc-block-style-css" href="healthflex_files/style.css" type="text/css" media="all">
@@ -140,6 +147,18 @@
         };
         /* ]]> */
     </script>
+    <!-- jQuery -->
+    <script src="./healthflex_files/assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="./healthflex_files/assets/js/popper.min.js"></script>
+    <script src="./healthflex_files/assets/js/bootstrap.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="./healthflex_files/assets/js/slick.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./healthflex_files/assets/js/script.js"></script>
     <script type="text/javascript" src="healthflex_files/add-to-cart.min.js"></script>
     <script type="text/javascript" src="healthflex_files/woocommerce-add-to-cart.js"></script>
     <script type="text/javascript" src="healthflex_files/modernizr.custom.48287.js"></script>
@@ -266,7 +285,7 @@
         .sep_angled_positive_bottom .separator_bottom:before {
             right: 49.8% !important;
         }            </style>
-    <script src="healthflex_files/f(1).txt"></script>
+    <script src="./healthflex_files/f(1).txt"></script>
     <style piggy-ext="" data-styled-version="4.2.0"></style>
     <style piggy-ext="" data-styled-version="4.2.0"></style>
 </head>

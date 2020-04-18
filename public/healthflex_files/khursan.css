@@ -1,0 +1,114 @@
+
+.myform{
+    background-color: white;
+    width: 600px;
+    height: 800px;
+    padding: 50px;
+}
+
+.myform img{
+    width: 250px;
+    height: 50px;
+}
+.myform p{
+    font-size: 30px;
+    color: #02244a;
+}
+.myform input{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 40px;
+}
+.myform button{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    background-color: #31486f;
+    color: white;
+}
+.myform button:hover{
+    background-color: #4bacfc;
+    color: white;
+}
+.myform i{
+    font-size: 20px;
+    position: relative;
+    left: 15px;
+    top: -40px;
+    opacity: 50%;
+}
+.dropdown{
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px grey;
+    position: absolute;
+    padding: 20px;
+    z-index: 10;
+    width: 500px;
+    display: none;
+
+}
+#div{
+    border: 1px solid grey;
+    height: 42px;
+}
+#div1{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    padding: 5px;
+    float: left;
+    background-color: blue;
+    width: 221px;
+    height: 40px;
+}
+#div2{
+    float: left;
+    width: 0px;
+    height: 0px;
+    border-left: 16px solid blue;
+    border-bottom: 20px solid white;
+    border-top: 20px solid white;
+
+}
+#div3{
+    text-align: center;
+    color:grey;
+    font-size: 20px;
+    padding: 5px;
+    float: left;
+    background-color: white;
+    width: 221px;
+    height: 40px;
+}
+#div4{
+    max-width: 250px;
+    color: grey;
+    font-size: 20px;
+}
+#div5{
+    max-width: 250px;
+    color: grey;
+    font-size: 20px;
+}
+#div6{
+
+}
+#div7{
+    display: none;
+}
+.div{
+    max-width: 250px;
+    font-size: 20px;
+    color: grey;
+}
+.doc_picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+}
+.table span{
+    display: inline-flex;
+    margin-top: 30px;
+}

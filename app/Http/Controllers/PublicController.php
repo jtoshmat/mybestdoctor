@@ -14,4 +14,8 @@ class PublicController extends Controller
         $sayHello = "Jon aka says Hello!";
         return view("healthflex.khursan", compact('sayHello'));
     }
+    public function khursand(){
+        $hello = "Greeting";
+        return view("healthflex.khursand", compact('hello'));
+    }
 }
