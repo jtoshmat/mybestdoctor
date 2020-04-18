@@ -92,13 +92,13 @@ THEME STYLES v.1.0.1
 }
 .full_height {
   min-height: calc(100vh -  78px);
-  min-height: -o-calc(100vh -  78px);
+
   min-height: -webkit-calc(100vh -  78px);
   min-height: -moz-calc(100vh -  78px);
 }
 .transparent_header .full_height {
   min-height: calc(100vh);
-  min-height: -o-calc(100vh);
+
   min-height: -webkit-calc(100vh);
   min-height: -moz-calc(100vh);
 }
