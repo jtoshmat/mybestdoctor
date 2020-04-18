@@ -185,7 +185,7 @@
 
                     <div class="subtitle body-bg_section   ">
                         <div class="container">
-                            <p>Theme's Custom Shortcodes &amp; Visual Composer Defaults</p>
+                            <span id="login" ><a href="khursan.blade.php">List your practice on My-best-doctor</a>|<a>Log in / Sign up</a></span>
                         </div>
                     </div>
 
@@ -210,6 +210,7 @@
                     <div class="row">
                         <div class="wpb_column vc_column_container col-sm-12">
                             <div class="wpb_wrapper">
+
                                 @include('healthflex.include.khursan')
                                 <div class="-border myform">
                                     <img src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3632453/910/607/m1/fpnw/wm0/1-.png?1511530520&s=77bae50c165f67c57a0adce4c19a2fb6">
@@ -230,12 +231,16 @@
                                                 <ul>
                                                 <span id="op1" value="United-healthcare" onclick="chooseHealthCare()">United-healthcare</span><br>
                                                 <span id="op2" onclick="chooseHealthCare()">Aetna</span><br>
+                                                <span id="op3" onclick="chooseHealthCare()">Cigna</span><br>
+                                                <span id="op4" onclick="chooseHealthCare()">Davis Vision</span><br>
                                                 </ul>
                                             </div>
                                             <div id="div7">
                                                 <ul>
                                                 <span id="plan1" onclick="choosePlan()">Elect Choice EPO</span><br>
                                                 <span id="plan2" onclick="choosePlan()">HMO</span><br>
+                                                <span id="plan3" onclick="choosePlan()">NYC Community Plan</span><br>
+                                                <span id="plan4" onclick="choosePlan()">Select</span><br>
                                                 </ul>
                                             </div>
                                         </div>
