@@ -189,7 +189,7 @@
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
-                                        <a class="apt-btn" href="#">Book Appointment</a>
+                                        <a class="apt-btn" href="khursand">Book Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
-                                        <a class="apt-btn" href="">Book Appointment</a>
+                                        <a class="apt-btn" href="khursand">Book Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -299,7 +299,7 @@
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
-                                        <a class="apt-btn" href="booking.html">Book Appointment</a>
+                                        <a class="apt-btn" href="khursand">Book Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +354,7 @@
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
-                                        <a class="apt-btn" href="booking.html">Book Appointment</a>
+                                        <a class="apt-btn" href="khursand">Book Appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +409,7 @@
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
-                                        <a class="apt-btn" href="booking.html">Book Appointment</a>
+                                        <a class="apt-btn" href="khursand.blade.php">Book Appointment</a>
                                     </div>
                                 </div>
                             </div>

@@ -248,7 +248,7 @@
                                     </form>
                                 </div>
                                 <hr>
-                                <table class="table-info table">
+                                <table class="table">
                                     <tr>
                                         <td><img class="doc_picture" src="https://hcplive.s3.amazonaws.com/v1_media/_image/happydoctor.jpg"></td>
                                         <td>

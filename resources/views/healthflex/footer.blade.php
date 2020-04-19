@@ -11,7 +11,7 @@
 
                             <p>
                                 <img
-                                    src="https://plethorathemes.com/healthflex/wp-content/uploads/2013/06/healthflex_logo_white.png"
+                                    src="healthflex_files/logo.png"
                                     alt="" style=""></p>
 
 
