@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ftp.php-developers.net" createEmptyFolders="true" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc;.env" autoUploadExternalChanges="true">
-    <serverData>
-      <paths name="ftp.php-developers.net">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
-    <option name="myAutoUpload" value="ALWAYS" />
-  </component>
+  <component name="PublishConfigData" createEmptyFolders="true" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc;.env" autoUploadExternalChanges="true" />
 </project>

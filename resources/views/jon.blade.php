@@ -7,19 +7,7 @@
     <meta name="apple-touch-fullscreen" content="yes">
     <title>Home - HEALTHFLEX</title>
 
-    <!-- This site is optimized with the Yoast SEO plugin v12.8.1 - https://yoast.com/wordpress/plugins/seo/ -->
-    <meta name="robots" content="noindex,follow">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Home - HEALTHFLEX">
-    <meta property="og:url" content="https://plethorathemes.com/healthflex/">
-    <meta property="og:site_name" content="HEALTHFLEX">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home - HEALTHFLEX">
-    <meta name="twitter:site" content="@plethorathemes">
-    <meta name="twitter:creator" content="@plethorathemes">
-    <script type="text/javascript" async="" src="./healthflex_files/analytics.js"></script><script type="text/javascript" async="" src="./healthflex_files/f.txt"></script><script src="./healthflex_files/407134556812816" async=""></script><script async="" src="./healthflex_files/fbevents.js"></script><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://plethorathemes.com/healthflex/#website","url":"https://plethorathemes.com/healthflex/","name":"HEALTHFLEX","description":"Medical Wordpress Theme","potentialAction":{"@type":"SearchAction","target":"https://plethorathemes.com/healthflex/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://plethorathemes.com/healthflex/#webpage","url":"https://plethorathemes.com/healthflex/","inLanguage":"en-US","name":"Home - HEALTHFLEX","isPartOf":{"@id":"https://plethorathemes.com/healthflex/#website"},"datePublished":"2015-09-28T16:00:31+00:00","dateModified":"2016-10-10T14:30:26+00:00"}]}</script>
-    <!-- / Yoast SEO plugin. -->
+
 
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
     <link rel="dns-prefetch" href="https://s.w.org/">
@@ -149,7 +137,7 @@
                     </div>
 
                     <div class="col-md-6 col-sm-6 hidden-xs hidden-sm text-right">
-                        <i class="fa fa-ambulance"></i> Emergency Line <strong>(+555) 959-595-959</strong>            </div>
+                        <i class="fa fa-ambulance"></i> Contact Info <strong>+1 (347) 576-94951</strong>            </div>
 
 
                 </div><!-- row -->

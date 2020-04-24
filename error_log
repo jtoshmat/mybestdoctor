@@ -1,1 +1,2 @@
 [25-Dec-2019 08:59:55 America/Chicago] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home4/jontoshmatov/public_html/algorithm/vendor/symfony/var-dumper/Resources/functions/dump.php on line 18
+[15-Feb-2020 10:09:18 America/Chicago] PHP Fatal error:  Allowed memory size of 1610612736 bytes exhausted (tried to allocate 24 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/DependencyResolver/Solver.php on line 220

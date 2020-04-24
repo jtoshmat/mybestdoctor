@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', 'TestController@welcome');
 Route::get('terms', function () {
     return view('terms');
 });
@@ -20,9 +19,11 @@ Route::get('privacy', function () {
 });
 
 //DO NOT REMOVE THIS -- This a fix for http://my-best-doctor.uz/healthflex?wc-ajax=get_refreshed_fragments 404 page
-Route::get('healthflex', function () {
-    return 'healthflex';
+Route::get('/', function () {
+    return view('healthflex.index');
 });
+
+include('healthflex.php');
 
 
 

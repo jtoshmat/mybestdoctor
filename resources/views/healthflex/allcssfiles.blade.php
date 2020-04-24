@@ -1,0 +1,3 @@
+<link rel='stylesheet' id='prettyphoto-css'  href='https://plethorathemes.com/healthflex/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'  href='https://plethorathemes.com/healthflex/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_animate-css-css'  href='https://plethorathemes.com/healthflex/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.1' type='text/css' media='all' />
