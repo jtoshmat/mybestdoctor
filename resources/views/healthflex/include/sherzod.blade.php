@@ -2,7 +2,7 @@
     <div class="wpb_wrapper">
         <div class="section_header subtitle_bottom   fancy text-left">
 
-            <!-- Home Banner -->
+            <!-- Home Banner -- -->
             <section class="section section-search">
                 <div class="container-fluid">
                     <div class="banner-wrapper">
