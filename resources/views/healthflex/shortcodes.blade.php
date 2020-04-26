@@ -1717,17 +1717,17 @@
         /* ]]> */
     </script>
     <!-- jQuery -->
-    <script src="healthflex_files/assets/js/jquery.min.js"></script>
+    <script src="/healthflex_files/assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JS -->
-    <script src="healthflex_files/assets/js/popper.min.js"></script>
-    <script src="healthflex_files/assets/js/bootstrap.min.js"></script>
+    <script src="/healthflex_files/assets/js/popper.min.js"></script>
+    <script src="/healthflex_files/assets/js/bootstrap.min.js"></script>
 
     <!-- Slick JS -->
-    <script src="healthflex_files/assets/js/slick.js"></script>
+    <script src="/healthflex_files/assets/js/slick.js"></script>
 
     <!-- Custom JS -->
-    <script src="healthflex_files/assets/js/script.js"></script>
+    <script src="/healthflex_files/assets/js/script.js"></script>
     <script type='text/javascript' src='https://plethorathemes.com/healthflex/wp-content/themes/healthflex/assets/js/theme.js?ver=5.3.2'></script>
     <script type='text/javascript' src='https://plethorathemes.com/healthflex/wp-content/themes/healthflex/includes/core/assets/js/libs/newsletter/newsletter.min.js?ver=1.0'></script>
     <script type='text/javascript' src='https://plethorathemes.com/healthflex/wp-content/themes/healthflex/includes/core/assets/js/libs/newsletter/newsletter-svg.js?ver=1.0'></script>

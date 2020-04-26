@@ -59,3 +59,10 @@
 <script src="/healthflex_files/assets/js/script.js"></script>
 <script src="/healthflex_files/khursan.js"></script>
 
+<script src="healthflex_files/assets/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="healthflex_files/assets/js/popper.min.js"></script>
+<script src="healthflex_files/assets/js/bootstrap.min.js"></script>
+
+

@@ -1,7 +1,5 @@
 <?php
-Route::get('/search', function () {
-    return view('healthflex.search');
-});
+
 
 Route::get('/about-us', function () {
     return view('healthflex.aboutus');
@@ -76,6 +74,10 @@ Route::get('/blank', function () {
     return view('healthflex.blank');
 });
 Route::get('/sherzod', 'PublicController@sherzod');
+Route::get('/search', 'PublicController@search');
+Route::get('/search2', 'PublicController@search2');
 Route::get('/khursan', 'PublicController@khursan');
 Route::get('/khursand', 'PublicController@khursand');
+Route::get('/register2', 'PublicController@register2');
+Route::get('/patient-register', 'PublicController@patientRegister');
 

@@ -2,7 +2,7 @@
     <div class="wpb_wrapper">
         <div class="section_header subtitle_bottom   fancy text-left">
 
-            <!-- Home Banner -->
+            <!-- Home Banner -- -->
             <section class="section section-search">
                 <div class="container-fluid">
                     <div class="banner-wrapper">
@@ -13,16 +13,16 @@
 
                         <!-- Search -->
                         <div class="search-box">
-                            <form action="">
+                            <form action="search">
                                 <div class="form-group search-location">
                                     <input type="text" class="form-control" placeholder="Search Location">
                                     <span class="form-text">Sizga kerak bo'lgan Shaharni yozing</span>
                                 </div>
                                 <div class="form-group search-info">
-                                    <input type="text" class="form-control" placeholder="Search Doctors, Clinics, Hospitals">
+                                    <input type="text" class="form-control" name="keyword" placeholder="Search Doctors, Clinics, Hospitals">
                                     <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                                 </div>
-                                <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
+                                <button type="submit"  class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
                             </form>
                         </div>
                         <!-- /Search -->
@@ -41,7 +41,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-9">
-                            <!-- Slider -->
+                            <!-- Slider ---->
                             <div class="specialities-slider slider">
 
                                 <!-- Slider Item -->

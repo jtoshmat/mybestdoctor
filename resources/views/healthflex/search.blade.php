@@ -50,9 +50,9 @@
 
             <!-- Search -->
             <div class="search-box">
-                <form action="">
+                <form action="search2">
                     <div class="form-group search-location">
-                        <input type="text" class="form-control" list="shahar" placeholder="Shaharni izlash">
+                        <input type="text" name="city" class="form-control" list="shahar" placeholder="Shaharni izlash">
                         <datalist id="shahar">
                             <option>Toshkent</option>
                             <option>Samarqand</option>
@@ -73,7 +73,7 @@
                         <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                     </div>
                     <div class="form-group search-info">
-                        <input type="text" class="form-control" placeholder="Search Doctors, Clinics, Hospitals">
+                        <input type="text" class="form-control" name="keyword" placeholder="Search Doctors, Clinics, Hospitals">
                         <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                     </div>
                     <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
@@ -141,6 +141,8 @@
 
                 <div class="col-md-12 col-lg-8 col-xl-9">
 
+                    @foreach($doctorlist as $doctor)
+
                     <!-- Doctor Widget -->
                     <div class="card">
                         <div class="card-body">
@@ -151,11 +153,11 @@
                                              class="img-fluid" alt="User Image">
                                     </div>
                                     <div class="doc-info-cont">
-                                        <h4 class="doc-name">Dr. Ruby Perrin</h4>
-                                        <p class="doc-speciality">MDS - Periodontology and Oral Implantology, BDS</p>
+                                        <h4 class="doc-name">{{$doctor->doctors_name}}</h4>
+                                        <p class="doc-speciality">{{$doctor->speciality_type}}</p>
                                         <h5 class="doc-department"><img
                                                 src="/healthflex_files/assets/img/specialities/specialities-05.png"
-                                                class="img-fluid" alt="Speciality">Dentist</h5>
+                                                class="img-fluid" alt="Speciality">{{$doctor->speciality_title}}</h5>
                                         <div class="rating">
                                             <i class="fas fa-star filled"></i>
                                             <i class="fas fa-star filled"></i>
@@ -165,25 +167,25 @@
                                             <span class="d-inline-block average-rating">(17)</span>
                                         </div>
                                         <div class="clinic-details">
-                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i>Toshkent, Uzb
+                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i>{{$doctor->location}}
                                             </p>
 
                                         </div>
                                         <div class="clinic-services">
-                                            <span> Oqartirish</span>
-                                            <span>Koronka urnatish</span>
-                                            <span>Implant</span>
-                                            <span>Va Boshqalar</span>
+                                            <span> {{$doctor->spec_desc1}}</span>
+                                            <span>{{$doctor->spec_desc2}}</span>
+                                            <span>{{$doctor->spec_desc3}}</span>
+                                            <span>{{$doctor->spec_desc4}}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="doc-info-right">
                                     <div class="clinic-infos">
                                         <ul>
-                                            <li><i class="far fa-thumbs-up"></i> 98%</li>
+                                            <li><i class="far fa-thumbs-up"></i>{{$doctor->rate}}</li>
                                             <li><i class="far fa-comment"></i> 17 Feedback</li>
-                                            <li><i class="fas fa-map-marker-alt"></i> Toshkent, UZB</li>
-                                            <li><i class="far fa-money-bill-alt"></i>$10dan - $1000gacha <i
+                                            <li><i class="fas fa-map-marker-alt"></i> {{$doctor->location}}</li>
+                                            <li><i class="far fa-money-bill-alt"></i>{{$doctor->price_range}}<i
                                                     class="fas fa-info-circle" data-toggle="tooltip"
                                                     title="Lorem Ipsum"></i></li>
                                         </ul>
@@ -196,7 +198,7 @@
                         </div>
                     </div>
                     <!-- /Doctor Widget -->
-
+                    @endforeach
                     <!-- Doctor Widget -->
                     <div class="card">
                         <div class="card-body">
@@ -416,6 +418,7 @@
                         </div>
                     </div>
                     <!-- /Doctor Widget -->
+
 
                     <div class="load-more text-center">
                         <a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>
