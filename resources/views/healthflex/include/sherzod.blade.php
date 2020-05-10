@@ -13,16 +13,33 @@
 
                         <!-- Search -->
                         <div class="search-box">
-                            <form action="search">
+                            <form action="search" method="get">
                                 <div class="form-group search-location">
-                                    <input type="text" class="form-control" placeholder="Search Location">
-                                    <span class="form-text">Sizga kerak bo'lgan Shaharni yozing</span>
+                                    <input type="text" name="cityKey" value="{{request()->input('cityKey')}}" class="form-control" list="shahar" placeholder="Shaharni izlash">
+                                    <datalist id="shahar">
+                                        <option>Toshkent</option>
+                                        <option>Samarqand</option>
+                                        <option>Farg'ona</option>
+                                        <option>Namangan</option>
+                                        <option>Andijon</option>
+                                        <option>Qo'qon</option>
+                                        <option>Nukus</option>
+                                        <option>Urganch</option>
+                                        <option>Termiz</option>
+                                        <option>Guliston</option>
+                                        <option>Navoiy</option>
+                                        <option>Marg'ilon</option>
+                                        <option>Shahrisabz</option>
+                                        <option>Qarshi</option>
+                                        <option>Kattaqurg'on</option>
+                                    </datalist>
+                                    <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                                 </div>
                                 <div class="form-group search-info">
-                                    <input type="text" class="form-control" name="keyword" placeholder="Search Doctors, Clinics, Hospitals">
+                                    <input type="text" class="form-control" name="key" value="{{request()->input('key')}}" placeholder="Search Doctors, Clinics, Hospitals">
                                     <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                                 </div>
-                                <button type="submit"  class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
+                                <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
                             </form>
                         </div>
                         <!-- /Search -->

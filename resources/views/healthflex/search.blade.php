@@ -24,13 +24,15 @@
                                 <li class="breadcrumb-item active" aria-current="page">Search</li>
                             </ol>
                         </nav>
-                        <h2 class="breadcrumb-title">Uzbekiston bo'ylab: 198 ta Stamatolog topildi</h2>
+
+                        <h2 class="breadcrumb-title">Uzbekiston bo'ylab: {{ $doctors->count() }} ta Stamatolog topildi</h2>
+
                     </div>
                     <div class="col-md-4 col-12 d-md-block d-none">
                         <div class="sort-by">
                             <span class="sort-title">Sortlash</span>
                             <span class="sortby-fliter">
-									<select class="select">
+									<select class="select filter-select" data-column="0">
 										<option>tanlang</option>
 										<option class="sorting">Rating</option>
 										<option class="sorting">Popular</option>
@@ -50,9 +52,9 @@
 
             <!-- Search -->
             <div class="search-box">
-                <form action="search2">
+                <form action="search" method="get">
                     <div class="form-group search-location">
-                        <input type="text" name="city" class="form-control" list="shahar" placeholder="Shaharni izlash">
+                        <input type="text" name="cityKey" value="{{request()->input('cityKey')}}" class="form-control" list="shahar" placeholder="Shaharni izlash">
                         <datalist id="shahar">
                             <option>Toshkent</option>
                             <option>Samarqand</option>
@@ -73,7 +75,7 @@
                         <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                     </div>
                     <div class="form-group search-info">
-                        <input type="text" class="form-control" name="keyword" placeholder="Search Doctors, Clinics, Hospitals">
+                        <input type="text" class="form-control" name="key" value="{{request()->input('key')}}" placeholder="Search Doctors, Clinics, Hospitals">
                         <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                     </div>
                     <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
@@ -141,7 +143,7 @@
 
                 <div class="col-md-12 col-lg-8 col-xl-9">
 
-                    @foreach($doctorlist as $doctor)
+                    @foreach($doctors as $doctor)
 
                     <!-- Doctor Widget -->
                     <div class="card">
@@ -180,7 +182,7 @@
                                     </div>
                                 </div>
                                 <div class="doc-info-right">
-                                    <div class="clinic-infos">
+                                    <div class="clini-infos">
                                         <ul>
                                             <li><i class="far fa-thumbs-up"></i>{{$doctor->rate}}</li>
                                             <li><i class="far fa-comment"></i> 17 Feedback</li>
@@ -199,225 +201,7 @@
                     </div>
                     <!-- /Doctor Widget -->
                     @endforeach
-                    <!-- Doctor Widget -->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="doctor-widget">
-                                <div class="doc-info-left">
-                                    <div class="doctor-img">
-                                        <img src="/healthflex_files/assets/img/doctors/doctor-thumb-03.jpg"
-                                             class="img-fluid" alt="User Image">
-                                    </div>
-                                    <div class="doc-info-cont">
-                                        <h4 class="doc-name">Dr. Darren Elder</h4>
-                                        <p class="doc-speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
-                                        <h5 class="doc-department"><img
-                                                src="/healthflex_files/assets/img/specialities/specialities-05.png"
-                                                class="img-fluid" alt="Speciality">Dentist</h5>
-                                        <div class="rating">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star"></i>
-                                            <span class="d-inline-block average-rating">(35)</span>
-                                        </div>
-                                        <div class="clinic-details">
-                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Samarkand, UZB
-                                            </p>
-                                        </div>
-                                        <div class="clinic-services">
-                                            <span>Tish tozalash</span>
-                                            <span> Oqartirish</span>
-                                            <span> Plombalash</span>
-                                            <span>Nerv olish</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="doc-info-right">
-                                    <div class="clini-infos">
-                                        <ul>
-                                            <li><i class="far fa-thumbs-up"></i> 100%</li>
-                                            <li><i class="far fa-comment"></i> 35 Feedback</li>
-                                            <li><i class="fas fa-map-marker-alt"></i> Samarqand, UZB</li>
-                                            <li><i class="far fa-money-bill-alt"></i> $50 - $300 <i
-                                                    class="fas fa-info-circle" data-toggle="tooltip"
-                                                    title="Lorem Ipsum"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clinic-booking">
-                                        <a class="apt-btn" href="khursand">Book Appointment</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Doctor Widget -->
 
-                    <!-- Doctor Widget -->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="doctor-widget">
-                                <div class="doc-info-left">
-                                    <div class="doctor-img">
-                                        <img src="/healthflex_files/assets/img/doctors/doctor-thumb-04.jpg"
-                                             class="img-fluid" alt="User Image">
-                                    </div>
-                                    <div class="doc-info-cont">
-                                        <h4 class="doc-name">Dr. Darren Elder</h4>
-                                        <p class="doc-speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
-                                        <h5 class="doc-department"><img
-                                                src="/healthflex_files/assets/img/specialities/specialities-05.png"
-                                                class="img-fluid" alt="Speciality">Dentist</h5>
-                                        <div class="rating">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star"></i>
-                                            <span class="d-inline-block average-rating">(35)</span>
-                                        </div>
-                                        <div class="clinic-details">
-                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Samarkand, UZB
-                                            </p>
-                                        </div>
-                                        <div class="clinic-services">
-                                            <span>Tish tozalash</span>
-                                            <span> Oqartirish</span>
-                                            <span> Plombalash</span>
-                                            <span>Va Boshqalar</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="doc-info-right">
-                                    <div class="clini-infos">
-                                        <ul>
-                                            <li><i class="far fa-thumbs-up"></i> 100%</li>
-                                            <li><i class="far fa-comment"></i> 35 Feedback</li>
-                                            <li><i class="fas fa-map-marker-alt"></i> Samarqand, UZB</li>
-                                            <li><i class="far fa-money-bill-alt"></i> $50 - $300 <i
-                                                    class="fas fa-info-circle" data-toggle="tooltip"
-                                                    title="Lorem Ipsum"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clinic-booking">
-                                        <a class="apt-btn" href="khursand">Book Appointment</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Doctor Widget -->
-
-                    <!-- Doctor Widget -->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="doctor-widget">
-                                <div class="doc-info-left">
-                                    <div class="doctor-img">
-                                        <img src="/healthflex_files/assets/img/doctors/doctor-thumb-06.jpg"
-                                             class="img-fluid" alt="User Image">
-                                    </div>
-                                    <div class="doc-info-cont">
-                                        <h4 class="doc-name">Dr. Darren Elder</h4>
-                                        <p class="doc-speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
-                                        <h5 class="doc-department"><img
-                                                src="/healthflex_files/assets/img/specialities/specialities-05.png"
-                                                class="img-fluid" alt="Speciality">Dentist</h5>
-                                        <div class="rating">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star"></i>
-                                            <span class="d-inline-block average-rating">(35)</span>
-                                        </div>
-                                        <div class="clinic-details">
-                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Samarkand, UZB
-                                            </p>
-                                        </div>
-                                        <div class="clinic-services">
-                                            <span>Tish tozalash</span>
-                                            <span> Oqartirish</span>
-                                            <span> Plombalash</span>
-                                            <span>Va Boshqalar</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="doc-info-right">
-                                    <div class="clini-infos">
-                                        <ul>
-                                            <li><i class="far fa-thumbs-up"></i> 100%</li>
-                                            <li><i class="far fa-comment"></i> 35 Feedback</li>
-                                            <li><i class="fas fa-map-marker-alt"></i> Samarqand, UZB</li>
-                                            <li><i class="far fa-money-bill-alt"></i> $50 - $300 <i
-                                                    class="fas fa-info-circle" data-toggle="tooltip"
-                                                    title="Lorem Ipsum"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clinic-booking">
-                                        <a class="apt-btn" href="khursand">Book Appointment</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Doctor Widget -->
-
-                    <!-- Doctor Widget -->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="doctor-widget">
-                                <div class="doc-info-left">
-                                    <div class="doctor-img">
-                                        <img src="/healthflex_files/assets/img/doctors/doctor-thumb-07.jpg"
-                                             class="img-fluid" alt="User Image">
-                                    </div>
-                                    <div class="doc-info-cont">
-                                        <h4 class="doc-name">Dr. Jessica</h4>
-                                        <p class="doc-speciality">Maxillofacial Surgery</p>
-                                        <h5 class="doc-department"><img
-                                                src="/healthflex_files/assets/img/specialities/specialities-05.png"
-                                                class="img-fluid" alt="Speciality">Dentist</h5>
-                                        <div class="rating">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star"></i>
-                                            <span class="d-inline-block average-rating">(35)</span>
-                                        </div>
-                                        <div class="clinic-details">
-                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Samarkand, UZB
-                                            </p>
-                                        </div>
-                                        <div class="clinic-services">
-                                            <span>Tish tozalash</span>
-                                            <span> Oqartirish</span>
-                                            <span> Plombalash</span>
-                                            <span>Va Boshqalar</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="doc-info-right">
-                                    <div class="clini-infos">
-                                        <ul>
-                                            <li><i class="far fa-thumbs-up"></i> 100%</li>
-                                            <li><i class="far fa-comment"></i> 35 Feedback</li>
-                                            <li><i class="fas fa-map-marker-alt"></i> Samarqand, UZB</li>
-                                            <li><i class="far fa-money-bill-alt"></i> $50 - $300 <i
-                                                    class="fas fa-info-circle" data-toggle="tooltip"
-                                                    title="Lorem Ipsum"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clinic-booking">
-                                        <a class="apt-btn" href="khursand.blade.php">Book Appointment</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Doctor Widget -->
 
 
                     <div class="load-more text-center">
@@ -431,14 +215,11 @@
     </div>
     <!-- /Page Content -->
 
-
 </div>
-
 
 </body>
 @include('healthflex.allcssfiles')
 @include('healthflex.alljavascriptfiles')
 <!-- doccure/search.html  30 Nov 2019 04:12:16 GMT -->
 </html>
-
 @endsection
