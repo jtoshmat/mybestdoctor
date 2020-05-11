@@ -57,3 +57,5 @@
 <script src="/healthflex_files/assets/js/slick.js"></script>
 <!-- Custom JS -->
 <script src="/healthflex_files/assets/js/script.js"></script>
+<script src="/healthflex_files/khursan.js"></script>
+

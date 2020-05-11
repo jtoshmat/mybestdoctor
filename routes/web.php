@@ -34,12 +34,21 @@ Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
 
 
 //All Authorized users pages
 Route::group(['middleware' => ['auth']], function () {
     include_once "auth_routes.php";
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/foo', function () {
+    echo 1;
+    return;
 });

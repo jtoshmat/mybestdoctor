@@ -37,6 +37,6 @@ class CreateDoctorListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doctor_lists');
+        Schema::dropIfExists('doctors');
     }
 }

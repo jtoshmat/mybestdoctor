@@ -2,7 +2,7 @@
     <div class="wpb_wrapper">
         <div class="section_header subtitle_bottom   fancy text-left">
 
-            <!-- Home Banner -->
+            <!-- Home Banner -- -->
             <section class="section section-search">
                 <div class="container-fluid">
                     <div class="banner-wrapper">
@@ -11,15 +11,33 @@
                             <p>Uzbekiston boylab Eng zo'r oliy toifali Shifokorlarni toping.</p>
                         </div>
 
+
                         <!-- Search -->
                         <div class="search-box">
-                            <form action="">
+                            <form action="/search" method="GET">
                                 <div class="form-group search-location">
-                                    <input type="text" class="form-control" placeholder="Search Location">
-                                    <span class="form-text">Sizga kerak bo'lgan Shaharni yozing</span>
+                                    <input type="text" name="cityKey" value="{{ request()->input('cityKey') }}" class="form-control" list="shahar" placeholder="Shaharni izlash">
+                                    <datalist id="shahar">
+                                        <option>Toshkent</option>
+                                        <option>Samarqand</option>
+                                        <option>Farg'ona</option>
+                                        <option>Namangan</option>
+                                        <option>Andijon</option>
+                                        <option>Qo'qon</option>
+                                        <option>Nukus</option>
+                                        <option>Urganch</option>
+                                        <option>Termiz</option>
+                                        <option>Guliston</option>
+                                        <option>Navoiy</option>
+                                        <option>Marg'ilon</option>
+                                        <option>Shahrisabz</option>
+                                        <option>Qarshi</option>
+                                        <option>Kattaqurg'on</option>
+                                    </datalist>
+                                    <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                                 </div>
                                 <div class="form-group search-info">
-                                    <input type="text" class="form-control" placeholder="Search Doctors, Clinics, Hospitals">
+                                    <input type="text" name="key" value="{{ request()->input('key') }}" class="form-control" placeholder="Search Doctors, Clinics, Hospitals">
                                     <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                                 </div>
                                 <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
@@ -41,7 +59,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-9">
-                            <!-- Slider -->
+                            <!-- Slider ---->
                             <div class="specialities-slider slider">
 
                                 <!-- Slider Item -->

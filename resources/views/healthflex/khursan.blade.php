@@ -41,7 +41,7 @@
                     <div class="logo">
                         <a href="/" class="brand">
                             <img
-                                src="https://plethorathemes.com/healthflex/wp-content/uploads/2013/06/healthflex_logo_color.png"
+                                src="healthflex_files/logo.png"
                                 alt="HealthFlex">
                         </a>
                     </div>
@@ -177,15 +177,15 @@
         <div class="head_panel skincolored_section diagonal-bgcolor-trans">
             <div class="diagonal_headings_layout">
                 <div class="hgroup">
-                    <div class="title diagonal-bgcolor-trans body-bg_section   ">
+                    <div class="title diagonal-bgcolor-trans body-bg_section">
                         <div class="container">
-                            <h1>Shortcodes</h1>
+                            <h1>Appointment</h1>
                         </div>
                     </div>
 
                     <div class="subtitle body-bg_section   ">
                         <div class="container">
-                            <p>Theme's Custom Shortcodes &amp; Visual Composer Defaults</p>
+                            <span id="login" ><a href="khursan.blade.php">List your practice on My-best-doctor</a>|<a>Log in / Sign up</a></span>
                         </div>
                     </div>
 
@@ -210,7 +210,89 @@
                     <div class="row">
                         <div class="wpb_column vc_column_container col-sm-12">
                             <div class="wpb_wrapper">
+
                                 @include('healthflex.include.khursan')
+                                <div class="-border myform">
+                                    <img src="healthflex_files/logo.png">
+                                    <br><p><b>Book My best doctor</b></p>
+                                    <form>
+                                        <input placeholder="doctor name" type="text" method="post">
+                                        <i class="fa fa-search"></i>
+                                        <input placeholder="zip code or city" type="text" method="post">
+                                        <i class="fa fa-location-arrow"></i>
+                                        <input  type="date" method="post">
+                                            <i class="fa fa-calendar"></i>
+                                        <input id="insurance" placeholder="insurance carrier and plan" onclick=healthCareOpt() type="text" method="post">
+                                        <i class="fa fa-file"></i>
+                                        <div id="healthCareOpt" class="dropdown">
+                                            <div id="div"><div id="div1">1. Choose carrier</div><div id="div2"></div><div id="div3">2. Choose plan</div></div><br>
+                                            <div class="div" id="div4"></div><div class="div" id="div5"></div>
+                                            <div id="div6">
+                                                <ul>
+                                                <span id="op1" value="United-healthcare" onclick="chooseHealthCare()">United-healthcare</span><br>
+                                                <span id="op2" onclick="chooseHealthCare()">Aetna</span><br>
+                                                <span id="op3" onclick="chooseHealthCare()">Cigna</span><br>
+                                                <span id="op4" onclick="chooseHealthCare()">Davis Vision</span><br>
+                                                </ul>
+                                            </div>
+                                            <div id="div7">
+                                                <ul>
+                                                <span id="plan1" onclick="choosePlan()">Elect Choice EPO</span><br>
+                                                <span id="plan2" onclick="choosePlan()">HMO</span><br>
+                                                <span id="plan3" onclick="choosePlan()">NYC Community Plan</span><br>
+                                                <span id="plan4" onclick="choosePlan()">Select</span><br>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button>Find</button>
+                                    </form>
+                                </div>
+                                <hr>
+                                <table class="table">
+                                    <tr>
+                                        <td><img class="doc_picture" src="https://hcplive.s3.amazonaws.com/v1_media/_image/happydoctor.jpg"></td>
+                                        <td>
+                                            <h3>Dr. Samuel Miller, MD</h3><br>
+                                            <p><b>Dentist</b><br>
+                                            587 Kings Hwy, Brooklyn, NY, 11223</p><br>
+                                            <i class="fa fa-star">4.77(88)</i>
+                                        </td>
+                                        <td>
+                                            <span><i class="fa fa-calendar"></i><p style="margin-left: 10px">Appointments available Mon, Apr 20</p></span><br>
+                                            <span><button style="width: 200px" class="btn-primary">Book online</button></span><br>
+                                            <span><button style="width: 200px" class="btn-primary">View profile and reviews</button></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="doc_picture" src="https://www.franklinhealthclinic.ca/wp-content/uploads/2020/03/doctor-img2.png"></td>
+                                        <td>
+                                            <h3>Dr. Samuel Miller, MD</h3><br>
+                                            <p><b>Dentist</b><br>
+                                            587 Kings Hwy, Brooklyn, NY, 11223</p><br>
+                                            <i class="fa fa-star">4.77(88)</i>
+                                        </td>
+                                        <td>
+                                            <span><i class="fa fa-calendar"></i><p style="margin-left: 10px">Appointments available Mon, Apr 20</p></span><br>
+                                            <span><button style="width: 200px" class="btn-primary">Book online</button></span><br>
+                                            <span><button style="width: 200px" class="btn-primary">View profile and reviews</button></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="doc_picture" src="https://purepng.com/public/uploads/large/purepng.com-doctordoctorsdoctors-and-nursesclinicianmedical-practitionernotepadfemale-1421526857248uragw.png"></td>
+                                        <td>
+                                            <h3>Dr. Angelica Delgado, OD</h3><br>
+                                            <p><b>Optometrist</b><br>
+                                            587 Kings Hwy, Brooklyn, NY, 11223</p><br>
+                                            <i class="fa fa-star">4.77(88)</i>
+                                        </td>
+                                        <td>
+                                            <span><i class="fa fa-calendar"></i><p style="margin-left: 10px">Appointments available Mon, Apr 20</p></span><br>
+                                            <span><button style="width: 200px" class="btn-primary">Book online</button></span><br>
+                                            <span><button style="width: 200px" class="btn-primary">View profile and reviews</button></span>
+                                        </td>
+                                    </tr>
+
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -218,162 +300,7 @@
             </section>
 
         </div>
-        <footer class="sep_angled_positive_top separator_top ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <!-- ========================== WIDGET ABOUT US ==========================-->
 
-                        <aside id="plethora-aboutus-widget-1" class="widget aboutus-widget">
-
-                            <div class="pl_about_us_widget  ">
-
-                                <p>
-                                    <img
-                                        src="https://plethorathemes.com/healthflex/wp-content/uploads/2013/06/healthflex_logo_white.png"
-                                        alt="" style="max-width:"></p>
-
-
-                                <p>Premium Wordpress Theme mainly Medical Oriented but so flexible that lets you build
-                                    various layouts for any "Health & Beauty" related business!</p>
-
-
-                                <p class='contact_detail'><a href='tel:(+30) 210 1234567'><i
-                                            class='fa fa-phone'></i></a><span><a href='tel:(+30) 210 1234567'>(+30) 210 1234567</a></span>
-                                </p>
-
-
-                                <p class='contact_detail'><a href='mailto:info@plethorathemes.com'><i
-                                            class='fa fa-envelope'></i></a><span><a
-                                            href='mailto:info@plethorathemes.com'>info@plethorathemes.com</a></span></p>
-
-
-                                <p class="contact_detail">
-                                    <a href='https://www.google.com/maps/place/79+Folsom+St,+San+Francisco,+CA+94105,+USA/@37.7902642,-122.3929651,17z/data=!3m1!4b1!4m2!3m1!1s0x8085807aad0a9e0b:0x378e593dff7a2ac3?hl=en'
-                                       target='_blank'>
-                                        <i class='fa fa-location-arrow'></i>
-                                    </a>
-                                    <span><a
-                                            href='https://www.google.com/maps/place/79+Folsom+St,+San+Francisco,+CA+94105,+USA/@37.7902642,-122.3929651,17z/data=!3m1!4b1!4m2!3m1!1s0x8085807aad0a9e0b:0x378e593dff7a2ac3?hl=en'
-                                            target='_blank'>79 Folsom Ave, San Francisco, CA 94107</a></span>
-                                </p>
-
-
-                            </div>
-
-                        </aside>
-
-                        <!-- END======================= WIDGET ABOUT US ==========================--></div>
-                    <div class="col-sm-6 col-md-3">
-                        <aside id="nav_menu-2" class="widget widget_nav_menu"><h4>Quick Links</h4>
-                            <div class="menu-quick-links-container">
-                                <ul id="menu-quick-links" class="menu">
-                                    <li id="menu-item-1784"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1784">
-                                        <a href="/services/">All Medical Services</a></li>
-                                    <li id="menu-item-1785"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1785">
-                                        <a href="/appointment-booking/">Appointment Booking</a></li>
-                                    <li id="menu-item-1786"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1786">
-                                        <a href="/faq/">FAQ</a></li>
-                                    <li id="menu-item-1787"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1787">
-                                        <a href="/fees-insurance/">Fees &amp; Insurance</a></li>
-                                    <li id="menu-item-1788"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1788">
-                                        <a href="/health-library/">Health Library A-Z</a></li>
-                                    <li id="menu-item-1755"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755">
-                                        <a href="/shop/">Shop</a></li>
-                                    <li id="menu-item-1791"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1791">
-                                        <a href="/free-checkup-offer/">Free Checkup Offer</a></li>
-                                </ul>
-                            </div>
-                        </aside><!-- ========================== WIDGET ABOUT US ==========================-->
-
-                        <aside id="plethora-aboutus-widget-2" class="widget aboutus-widget">
-
-                            <div class="pl_about_us_widget  ">
-
-
-                                <p class="social">
-
-                                    <a href='#' target='_blank' title="Twitter"><i class='fa fa-twitter'></i></a>
-                                    <a href='#' target='_blank' title="Facebook"><i class='fa fa-facebook'></i></a>
-                                    <a href='#' target='_blank' title="Google+"><i class='fa fa-google-plus'></i></a>
-                                    <a href='#' target='_blank' title="LinkedIn"><i class='fa fa-linkedin'></i></a>
-                                    <a href='#' target='_blank' title="Skype"><i class='fa fa-skype'></i></a>
-                                    <a href='#' target='_blank' title="Send Us An Email"><i class='fa fa-envelope'></i></a>
-                                </p>
-
-
-                            </div>
-
-                        </aside>
-
-                        <!-- END======================= WIDGET ABOUT US ==========================--></div>
-                    <div class="col-sm-6 col-md-3">
-                        <!-- ===================== LATEST NEWS: MUSTACHE ========================-->
-
-                        <aside id="plethora-latestnews-widget-1" class="widget latestnews-widget">
-
-                            <div class="pl_latest_news_widget">
-                                <h4>Latest News </h4>
-                                <ul class="media-list">
-
-                                    <li class="media">
-
-                                        <a href="/blog/2015/11/23/daily-exercise-is-essential-for-your-health/"
-                                           class="media-photo"
-                                           style="background-image:url(' https://plethorathemes.com/healthflex/wp-content/uploads/2015/11/woman_running-150x150.jpg ')"></a>
-
-                                        <h5 class="media-heading">
-                                            <a href="/blog/2015/11/23/daily-exercise-is-essential-for-your-health/">Daily
-                                                Exercise is essential</a>
-                                            <small>Nov 23</small>
-                                        </h5>
-                                        <p>When was the last time you went out for a...</p>
-                                    </li>
-
-
-                                    <li class="media">
-
-                                        <a href="/blog/2015/09/30/medical-advice/" class="media-photo"
-                                           style="background-image:url(' https://plethorathemes.com/healthflex/wp-content/uploads/2015/09/blog-pills-150x150.jpg ')"></a>
-
-                                        <h5 class="media-heading">
-                                            <a href="/blog/2015/09/30/medical-advice/">Medical Advice for all ages and
-                                                sexes</a>
-                                            <small>Sep 30</small>
-                                        </h5>
-                                        <p>How often does a post start with all these words? Allergy...</p>
-                                    </li>
-
-
-                                    <li class="media">
-
-                                        <a href="/blog/2015/09/30/diabetes-diet-and-food-tips/" class="media-photo"
-                                           style="background-image:url(' https://plethorathemes.com/healthflex/wp-content/uploads/2015/09/blog-salad-150x150.jpg ')"></a>
-
-                                        <h5 class="media-heading">
-                                            <a href="/blog/2015/09/30/diabetes-diet-and-food-tips/">Diabetes Diet and
-                                                Healthy Food Tips</a>
-                                            <small>Sep 30</small>
-                                        </h5>
-                                        <p>Let&#8217;s talk about what is health and how can this...</p>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </aside>
-
-                        <!-- END================== LATEST NEWS: MUSTACHE ========================--></div>
-                </div>
-            </div>
-        </footer>
         <div class="copyright dark_section">
             <div class="dark_section transparent_film">
                 <div class="container">
@@ -388,6 +315,7 @@
             </div>
         </div>
     </div>
+
     <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
     <script type="text/html" id="wpb-modifications"></script>
     <script type="text/javascript">
@@ -395,6 +323,7 @@
         c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
         document.body.className = c;
     </script>
+
     @include('healthflex.allcssfiles')
     @include('healthflex.alljavascriptfiles')
     </body>
