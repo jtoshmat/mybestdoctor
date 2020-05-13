@@ -48,6 +48,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/patient', 'PatientController@index')->name('patient');
+
 Route::post('/foo', function () {
     echo 1;
     return;
