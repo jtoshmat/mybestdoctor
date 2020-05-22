@@ -7,14 +7,14 @@ This file was created automatically by Plethora Icons Module class
 /* Font Awesome */
 @font-face {
 	    font-family: 'FontAwesome';
-	    src: url('webfonts/fontawesome-webfont.eot');
-		src: url('webfonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('webfonts/FontAwesome.otf') format('opentype'),
-		     url('webfonts/fontawesome-webfont.svg') format('svg'),
-		     url('webfonts/fontawesome-webfont.ttf') format('truetype'),
-		     url('webfonts/fontawesome-webfont.woff') format('woff'),
-		     url('webfonts/fontawesome-webfont.woff2') format('woff2');
-		font-style: normal
+	    src: url('//webfonts/fontawesome-webfont.eot');
+		src: url('//webfonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('//webfonts/FontAwesome.otf') format('opentype'),
+		     url('//webfonts/fontawesome-webfont.svg') format('svg'),
+		     url('//webfonts/fontawesome-webfont.ttf') format('truetype'),
+		     url('//webfonts/fontawesome-webfont.woff') format('woff'),
+		     url('//webfonts/fontawesome-webfont.woff2') format('woff2');
+		font-style: normal;
 		font-weight: normal;
 		font-stretch: normal;
 }
@@ -35,12 +35,12 @@ This file was created automatically by Plethora Icons Module class
 /* Webfont Medical Icons */
 @font-face {
 	    font-family: 'webfont-medical-icons';
-	    src: url('webfonts/webfont-medical-icons.eot');
-		src: url('webfonts/webfont-medical-icons.eot?#iefix') format('embedded-opentype'),
-		     url('webfonts/webfont-medical-icons.svg') format('svg'),
-		     url('webfonts/webfont-medical-icons.ttf') format('truetype'),
-		     url('webfonts/webfont-medical-icons.woff') format('woff');
-		font-style: normal
+	    src: url('//webfonts/webfont-medical-icons.eot');
+		src: url('//webfonts/webfont-medical-icons.eot?#iefix') format('embedded-opentype'),
+		     url('//webfonts/webfont-medical-icons.svg') format('svg'),
+		     url('//webfonts/webfont-medical-icons.ttf') format('truetype'),
+		     url('//webfonts/webfont-medical-icons.woff') format('woff');
+		font-style: normal;
 		font-weight: normal;
 		font-stretch: normal;
 }

@@ -80,3 +80,9 @@ Route::get('/khursan', 'PublicController@khursan');
 Route::get('/khursand', 'PublicController@khursand');
 Route::get('/search', 'PublicController@search');
 
+Route::prefix('doctor')->group(function() {
+    Route::get('/login', 'Auth\DoctorLoginController@showLoginForm')->name('doctor.login');
+    Route::post('/login', 'Auth\DoctorLoginController@login')->name('doctor.login.submit');
+    Route::get('/dashboard', 'DoctorController@index')->name('doctor.dashboard');
+});
+

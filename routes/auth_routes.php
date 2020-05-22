@@ -1,2 +1,2 @@
 <?php
-Route::get('/jon', 'TestController@welcome');
+//Route::get('/jon', 'TestController@welcome');

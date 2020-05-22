@@ -7,11 +7,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
-class Patient extends Authenticatable
+class Doctor extends Authenticatable
 {
     use Notifiable, HasRoles;
 
-    protected $guard = 'patient';
+    protected $guard = 'doctor';
 
     /**
      * The attributes that are mass assignable.
@@ -21,9 +21,9 @@ class Patient extends Authenticatable
     protected $fillable = [
 //        'name', 'username', 'email', 'image', 'provider', 'provider_id', 'password','facebook_id','nickname',
 //        'avatar','avatar_original','profileUrl','expiresIn','provider','provider_id'
-          'email', 'password',
+        'email', 'password',
 
-   ];
+    ];
 
     /**
      * The attributes that should be hidden for arrays.

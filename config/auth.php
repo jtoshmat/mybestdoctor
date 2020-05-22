@@ -17,6 +17,14 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+    'patients' => [
+        'driver' => 'eloquent',
+        'model' => App\Patient::class,
+    ],
+    'doctors' => [
+        'driver' => 'eloquent',
+        'model' => App\Doctor::class,
+    ],
 
 
 
@@ -57,6 +65,15 @@ return [
             'provider' => 'patients',
             'hash' => false,
         ],
+        'doctor' => [
+            'driver' => 'session',
+            'provider' => 'doctors',
+        ],
+        'doctor_api' => [
+            'driver' => 'token',
+            'provider' => 'doctors',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -84,6 +101,10 @@ return [
         'patients' => [
             'driver' => 'eloquent',
             'model' => App\Patient::class,
+        ],
+        'doctors' => [
+            'driver' => 'eloquent',
+            'model' => App\Doctor::class,
         ],
 
         // 'users' => [
@@ -116,6 +137,12 @@ return [
         ],
         'patients' => [
             'provider' => 'patients',
+            'table' => 'password_resets',
+            'expire' => 15,
+            'throttle' => 15,
+        ],
+        'doctors' => [
+            'provider' => 'doctors',
             'table' => 'password_resets',
             'expire' => 15,
             'throttle' => 15,

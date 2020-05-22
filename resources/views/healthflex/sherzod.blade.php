@@ -171,7 +171,7 @@
 
                     <label class="mobile_collapser"><span>MENU</span></label> <!-- Mobile menu title -->
                 </div>
-            </div>
+            </div> <!-- / topbar -->
 
         </div>
 

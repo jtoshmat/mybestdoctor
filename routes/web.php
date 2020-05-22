@@ -27,16 +27,12 @@ include('healthflex.php');
 
 
 
-Route::get('/welcome', 'TestController@welcome');
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
 
 
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
 
 
 //All Authorized users pages
@@ -48,7 +44,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/patient', 'PatientController@index')->name('patient');
+Route::prefix('patient')->group(function() {
+    Route::get('/login', 'Auth\PatientLoginController@showLoginForm')->name('patient.login');
+    Route::post('/login', 'Auth\PatientLoginController@login')->name('patient.login.submit');
+    Route::get('/home', 'PatientController@index')->name('patient.home');
+});
+
 
 Route::post('/foo', function () {
     echo 1;

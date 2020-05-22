@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PatientController extends Controller
+class DoctorController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -13,7 +13,7 @@ class PatientController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:patient');
+        $this->middleware('auth:doctor');
     }
 
     /**
@@ -23,6 +23,6 @@ class PatientController extends Controller
      */
     public function index()
     {
-        return view('patient');
+        return view('healthflex.doctor');
     }
 }
