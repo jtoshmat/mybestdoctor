@@ -1,5 +1,5 @@
 @include('healthflex.head')
-<div class="container">
+<div class="container-flued">
     @yield('content')
 </div>
 @include('healthflex.footer')

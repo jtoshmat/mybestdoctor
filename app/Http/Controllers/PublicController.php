@@ -14,53 +14,42 @@ class PublicController extends Controller
     }
     public function search(Request $request){
         $keyword = $request->keyword;
-        $doctorlist = Doctor_list::where('doctors_name','like','%'.$keyword.'%')->orWhere('speciality_type','like','%'.$keyword.'%')->orWhere('speciality_title','like','%'.$keyword.'%')->get();
+        $doctorlist = Doctor_list::where('doctors_name','like','%'.$keyword.'%')
+            ->orWhere('speciality_type','like','%'.$keyword.'%')
+            ->orWhere('speciality_title','like','%'.$keyword.'%')->get();
         return view("healthflex.search", compact('doctorlist'));
     }
 
     public function search2(Request $request){
+        if($request->keyword && $request->city){
         $keyword = $request->keyword;
         $city = $request->city;
-        $doctorlist = Doctor_list::Where('doctors_name','like','%'.$keyword.'%')->orWhere('speciality_type','like','%'.$keyword.'%')->orWhere('speciality_title','like','%'.$keyword.'%')->where('location', 'like', '%'.$city.'%')->get();
+        $doctorlist = Doctor_list::where('doctors_name','like','%'.$keyword.'%')
+            ->where('location', 'like', '%'.$city.'%')
+            ->orWhere('speciality_type','like','%'.$keyword.'%')
+            ->where('location', 'like', '%'.$city.'%')
+            ->orWhere('speciality_title','like','%'.$keyword.'%')
+            ->where('location', 'like', '%'.$city.'%')->get();
         return view("healthflex.search", compact('doctorlist'));
-    }
-
-    /*
-
-    $num = $request->question;
-        if ($num != ''){
-            $questions = \App\Question::where('id' ,$num)->get();
-            //return $questions;
-            return view('test',compact('questions'));}
+        }
+        elseif($request->keyword && $request->city == null ){
+            $keyword = $request->keyword;
+            $doctorlist = Doctor_list::orwhere('doctors_name','like','%'.$keyword.'%')
+                ->orWhere('speciality_type','like','%'.$keyword.'%')
+                ->orWhere('speciality_title','like','%'.$keyword.'%')->get();
+            return view("healthflex.search", compact('doctorlist'));
+        }
+        elseif($request->keyword == null && $request->city){
+            $city = $request->city;
+            $doctorlist = Doctor_list::where('location', 'like', '%'.$city.'%')->get();
+            return view("healthflex.search", compact('doctorlist'));
+        }
         else{
-            $questions = \App\Question::all();
-            //return $questions;
-            return view('test',compact('questions'));}
-    }
-
-
-
-
-
-
-        public function lists(Request $request) {
-        $where = 'country';
-        $value = 'Uzbekistan';
-        if ($request->select){
-            $where = $request->select;
+            $doctorlist = Doctor_list::All();
+            return view("healthflex.search", compact('doctorlist'));
         }
-        if ($request->country){
-            $value = $request->country;
-        }
-        $airports=  Airport::where($where, $value)->get();
-        return view('jontoshmatov.airports')->with('airports', $airports);
     }
 
-    public function keywordsearch(Request $request){
-        $airports = Airport::where('country', 'like', $request->keyword.'%')->select('country')->groupBy('country')->get();
-        return $airports;
-    }
-    */
 
     public function khursan(){
         $sayHello = "Jon aka says Hello!";

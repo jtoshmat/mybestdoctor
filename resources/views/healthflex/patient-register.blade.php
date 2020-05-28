@@ -225,7 +225,7 @@
 
 
                             <!-- Breadcrumb -->
-                                <h1>{{$hello}}</h1>
+
                                 <!-- /Breadcrumb -->
 
                                 <!-- Page Content -->
@@ -244,8 +244,8 @@
                                                             <img src="healthflex_files/assets/img/login-banner.png" class="img-fluid" alt="Doccure Register">
                                                         </div>
                                                         <div class="col-md-12 col-lg-6 login-right">
-                                                            <div class="login-header">
-                                                                <h3 class="registerh3">Patient Register <a href="register2">Are you a Doctor?</a></h3>
+                                                            <div  class="login-header">
+                                                                <h3 style="font-size: 16px">Patient Register <a href="register2">Are you a Doctor?</a></h3>
                                                             </div>
 
                                                             <!-- Register Form -->

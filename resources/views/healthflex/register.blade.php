@@ -225,7 +225,7 @@
 
 
                             <!-- Breadcrumb -->
-                               <h1>{{$hello}}</h1>
+
                                 <!-- /Breadcrumb -->
 
                                 <!-- Page Content -->

@@ -208,7 +208,7 @@
         </div>
         <div class="main foo" data-colorset="foo">
             <section class="vc_row wpb_row vc_row-fluid no_bottom_padding">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
 
                         @include('healthflex.include.sherzod')
