@@ -2,7 +2,7 @@
 @section('title', 'Shortcodes')
 @section('content')
     <body
-        class="page-template-default page page-id-568 theme-healthflex woocommerce-no-js wpb-js-composer js-comp-ver-6.1 vc_responsive sticky_header ">
+        class="page-template-default page page-id-568 theme-healthflex woocommerce-no-js wpb-js-composer js-comp-ver-6.1 vc_responsive sticky_header container">
     <div class="overflow_wrapper">
         <div class="header ">
             <div class="topbar vcenter transparent">

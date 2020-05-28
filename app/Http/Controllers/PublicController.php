@@ -9,10 +9,12 @@ use App\Doctor_list;
 class PublicController extends Controller
 {
     public function sherzod(Request $request){
+        $doctorlist = "";
         return view("healthflex.sherzod", compact('doctorlist'));
         //$airports = Airport::where('country', 'like', $request->keyword.'%')->select('country')->groupBy('country')->get()
     }
     public function search(Request $request){
+
         $keyword = $request->keyword;
         $doctorlist = Doctor_list::where('doctors_name','like','%'.$keyword.'%')
             ->orWhere('speciality_type','like','%'.$keyword.'%')
@@ -30,7 +32,48 @@ class PublicController extends Controller
             ->where('location', 'like', '%'.$city.'%')
             ->orWhere('speciality_title','like','%'.$keyword.'%')
             ->where('location', 'like', '%'.$city.'%')->get();
-        return view("healthflex.search", compact('doctorlist'));
+        return view("healthflex.search", compact('doctorlist'));}
+
+        $cityKey = $request->cityKey;
+        $key = $request->key;
+
+        $doctors = Doctor_list::where('speciality_title', 'LIKE', '%'.$key.'%')->
+        where('location', 'LIKE', '%'.$cityKey.'%')->
+        orWhere('doctors_name', 'LIKE', '%'.$key.'%')->
+        where('location', 'LIKE', '%'.$cityKey.'%')->
+        orWhere('speciality_type', 'LIKE', '%'.$key.'%')->
+        where('location', 'LIKE', '%'.$cityKey.'%')->get();
+
+
+
+        return view('healthflex.search', compact('doctors'));
+    }
+}
+
+    /*
+
+    $num = $request->question;
+        if ($num != ''){
+            $questions = \App\Question::where('id' ,$num)->get();
+            //return $questions;
+            return view('test',compact('questions'));}
+        else{
+            $questions = \App\Question::all();
+            //return $questions;
+            return view('test',compact('questions'));}
+    }
+
+
+
+
+
+
+        public function lists(Request $request) {
+        $where = 'country';
+        $value = 'Uzbekistan';
+        if ($request->select){
+            $where = $request->select;
+>>>>>>> fc202b03c5ea6e2c3ae31c9b2ffa9d80145ff364
         }
         elseif($request->keyword && $request->city == null ){
             $keyword = $request->keyword;

@@ -24,18 +24,24 @@
                                 <li class="breadcrumb-item active" aria-current="page">Search</li>
                             </ol>
                         </nav>
+<<<<<<< HEAD
                         @php $searchNum = 0; @endphp
                         @foreach($doctorlist as $doctor)
                            @php $searchNum++; @endphp
                             @endforeach
 
                         <h2 class="breadcrumb-title">Uzbekiston bo'ylab: {{$searchNum}} ta Stamatolog topildi</h2>
+=======
+
+                        <h2 class="breadcrumb-title">Uzbekiston bo'ylab: {{ $doctors->count() }} ta Stamatolog topildi</h2>
+
+>>>>>>> fc202b03c5ea6e2c3ae31c9b2ffa9d80145ff364
                     </div>
                     <div class="col-md-4 col-12 d-md-block d-none">
                         <div class="sort-by">
                             <span class="sort-title">Sortlash</span>
                             <span class="sortby-fliter">
-									<select class="select">
+									<select class="select filter-select" data-column="0">
 										<option>tanlang</option>
 										<option class="sorting">Rating</option>
 										<option class="sorting">Popular</option>
@@ -55,9 +61,9 @@
 
             <!-- Search -->
             <div class="search-box">
-                <form action="search2">
+                <form action="search" method="get">
                     <div class="form-group search-location">
-                        <input type="text" name="city" class="form-control" list="shahar" placeholder="Shaharni izlash">
+                        <input type="text" name="cityKey" value="{{request()->input('cityKey')}}" class="form-control" list="shahar" placeholder="Shaharni izlash">
                         <datalist id="shahar">
                             <option>Toshkent</option>
                             <option>Samarqand</option>
@@ -78,7 +84,7 @@
                         <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                     </div>
                     <div class="form-group search-info">
-                        <input type="text" class="form-control" name="keyword" placeholder="Search Doctors, Clinics, Hospitals">
+                        <input type="text" class="form-control" name="key" value="{{request()->input('key')}}" placeholder="Search Doctors, Clinics, Hospitals">
                         <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                     </div>
                     <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
@@ -146,7 +152,7 @@
 
                 <div class="col-md-12 col-lg-8 col-xl-9">
 
-                    @foreach($doctorlist as $doctor)
+                    @foreach($doctors as $doctor)
 
 
                     <!-- Doctor Widget -->
@@ -186,7 +192,7 @@
                                     </div>
                                 </div>
                                 <div class="doc-info-right">
-                                    <div class="clinic-infos">
+                                    <div class="clini-infos">
                                         <ul>
                                             <li><i class="far fa-thumbs-up"></i>{{$doctor->rate}}</li>
                                             <li><i class="far fa-comment"></i> 17 Feedback</li>
@@ -219,14 +225,11 @@
     </div>
     <!-- /Page Content -->
 
-
 </div>
-
 
 </body>
 @include('healthflex.allcssfiles')
 @include('healthflex.alljavascriptfiles')
 <!-- doccure/search.html  30 Nov 2019 04:12:16 GMT -->
 </html>
-
 @endsection
