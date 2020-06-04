@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+@extends('healthflex.master')
+@section('title', 'Shortcodes')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

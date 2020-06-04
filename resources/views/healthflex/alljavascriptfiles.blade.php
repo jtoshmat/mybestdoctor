@@ -59,10 +59,20 @@
 <script src="/healthflex_files/assets/js/script.js"></script>
 <script src="/healthflex_files/khursan.js"></script>
 
-<script src="healthflex_files/assets/js/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="/healthflex_files/assets/js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JS -->
-<script src="healthflex_files/assets/js/popper.min.js"></script>
-<script src="healthflex_files/assets/js/bootstrap.min.js"></script>
+<script src="/healthflex_files/assets/js/popper.min.js"></script>
+<script src="/healthflex_files/assets/js/bootstrap.min.js"></script>
 
+<!-- Sticky Sidebar JS -->
+<script src="/healthflex_files/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+<script src="/healthflex_files/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+<!-- Circle Progress JS -->
+<script src="/healthflex_files/assets/js/circle-progress.min.js"></script>
+
+<!-- Custom JS -->
+<script src="/healthflex_files/assets/js/script.js"></script>
 

@@ -78,6 +78,23 @@ Route::get('/search', 'PublicController@search');
 Route::get('/search2', 'PublicController@search2');
 Route::get('/khursan', 'PublicController@khursan');
 Route::get('/khursand', 'PublicController@khursand');
+
 Route::get('/register2', 'PublicController@register2');
 Route::get('/patient-register', 'PublicController@patientRegister');
+
+Route::get('/search', 'PublicController@search');
+
+Route::prefix('doctor')->group(function() {
+    Route::get('/login', 'Auth\DoctorLoginController@showLoginForm')->name('doctor.login');
+    Route::post('/login', 'Auth\DoctorLoginController@login')->name('doctor.login.submit');
+    Route::get('/dashboard', 'DoctorController@index')->name('doctor.dashboard');
+// Password reset
+
+    Route::any('/password/email', 'Auth\DoctorForgotPasswordController@sendResetLinkEmail')->name('doctor.password.email');
+    Route::get('/password/reset', 'Auth\DoctorForgotPasswordController@showLinkRequestForm')->name('doctor.password.request');
+    Route::post('/password/reset', 'Auth\DoctorResetPasswordController@reset');
+    Route::get('/password/reset/{token}', 'Auth\DoctorResetPasswordController@showResetForm')->name('doctor.password.reset');
+
+});
+
 

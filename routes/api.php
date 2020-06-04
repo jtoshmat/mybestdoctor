@@ -17,8 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('getLiveChatTranscripts', 'IndexController@getLiveChatTranscripts');
-Route::post('saveLiveChatTranscripts', 'IndexController@saveLiveChatTranscripts');
-Route::post('keywordsearch', 'AirportsController@keywordsearch');
 
-Route::post('test','IndexController@checkansver');
+//Route::post('getLiveChatTranscripts', 'IndexController@getLiveChatTranscripts');
+//Route::post('saveLiveChatTranscripts', 'IndexController@saveLiveChatTranscripts');
+
+
+//Route::post('test','IndexController@checkansver');

@@ -11,11 +11,13 @@
                             <p>Uzbekiston boylab Eng zo'r oliy toifali Shifokorlarni toping.</p>
                         </div>
 
+
                         <!-- Search -->
                         <div class="search-box">
-                            <form action="search" method="get">
+
+                            <form action="/search" method="GET">
                                 <div class="form-group search-location">
-                                    <input type="text" name="cityKey" value="{{request()->input('cityKey')}}" class="form-control" list="shahar" placeholder="Shaharni izlash">
+                                    <input type="text" name="cityKey" value="{{ request()->input('cityKey') }}" class="form-control" list="shahar" placeholder="Shaharni izlash">
                                     <datalist id="shahar">
                                         <option>Toshkent</option>
                                         <option>Samarqand</option>
@@ -36,6 +38,7 @@
                                     <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                                 </div>
                                 <div class="form-group search-info">
+
                                     <input type="text" class="form-control" name="key" value="{{request()->input('key')}}" placeholder="Search Doctors, Clinics, Hospitals">
                                     <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                                 </div>
