@@ -22,7 +22,7 @@ class Doctor extends Authenticatable
     protected $fillable = [
 //        'name', 'username', 'email', 'image', 'provider', 'provider_id', 'password','facebook_id','nickname',
 //        'avatar','avatar_original','profileUrl','expiresIn','provider','provider_id'
-        'email', 'password',
+        'email', 'name', 'password',
 
     ];
 

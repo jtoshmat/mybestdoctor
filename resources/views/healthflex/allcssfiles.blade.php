@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/fontawesome.min.css">
 <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/all.min.css">
 <link rel="stylesheet" href="/healthflex_files/assets/css/style.css">
-
+<link href="/healthflex_files/assets/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+<link href="/healthflex_files/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 

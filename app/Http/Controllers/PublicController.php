@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Intervention\Image\Facades\Image;;
 use Illuminate\Http\Request;
 use App\Doctor_list;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 {
@@ -53,6 +55,7 @@ class PublicController extends Controller
 
 
     }
+
 
 
 

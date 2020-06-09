@@ -34,7 +34,6 @@
 {{--									<select class="select filter-select" data-column="0">--}}
 
 									<select name="sortBy" class="select">
->>>>>>> 475ee7225f8644d4e1ed9ca8d21fc82c98695103
 										<option>tanlang</option>
 										<option class="sorting" value="rate">rate</option>
 										<option class="sorting">Popular</option>
@@ -54,15 +53,10 @@
 
             <!-- Search -->
             <div class="search-box">
-<<<<<<< HEAD
-                <form action="search" method="get">
-                    <div class="form-group search-location">
-                        <input type="text" name="cityKey" value="{{request()->input('cityKey')}}" class="form-control" list="shahar" placeholder="Shaharni izlash">
-=======
+
                 <form action="/search" method="GET">
                     <div class="form-group search-location">
                         <input type="text" name="cityKey" id="cityKey" value="{{ request()->input('cityKey') }}" class="form-control" list="shahar" placeholder="Shaharni izlash">
->>>>>>> 475ee7225f8644d4e1ed9ca8d21fc82c98695103
                         <datalist id="shahar">
                             <option>Toshkent</option>
                             <option>Samarqand</option>

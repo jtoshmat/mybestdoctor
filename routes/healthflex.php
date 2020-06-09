@@ -88,6 +88,12 @@ Route::prefix('doctor')->group(function() {
     Route::get('/login', 'Auth\DoctorLoginController@showLoginForm')->name('doctor.login');
     Route::post('/login', 'Auth\DoctorLoginController@login')->name('doctor.login.submit');
     Route::get('/dashboard', 'DoctorController@index')->name('doctor.dashboard');
+    Route::get('/profile-settings', 'DoctorController@profile_settings')->name('doctor.profile-settings');
+    Route::post('/profile-settings', 'DoctorController@update_avatar');
+    Route::get('/appointments', 'DoctorController@appointments')->name('doctor.appointments');
+    Route::get('/my-patients', 'DoctorController@my_patients')->name('doctor.my-patients');
+    Route::get('/schedule-timings', 'DoctorController@schedule_timings')->name('doctor.schedule-timings');
+    Route::get('/invoices', 'DoctorController@invoices')->name('doctor.invoices');
 // Password reset
 
     Route::any('/password/email', 'Auth\DoctorForgotPasswordController@sendResetLinkEmail')->name('doctor.password.email');

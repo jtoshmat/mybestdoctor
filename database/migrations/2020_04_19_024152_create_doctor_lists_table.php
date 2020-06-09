@@ -23,9 +23,9 @@ class CreateDoctorListsTable extends Migration
             $table->text('spec_desc3');
             $table->text('spec_desc4');
             $table->text('location');
-            $table->float('rate', 8, 2);
+            $table->float('rate', 8, 2)->nullable();
             $table->char('price_range', 100);
-            $table->text('picture');
+            $table->text('avatar')->nullable();
             $table->timestamps();
         });
     }
