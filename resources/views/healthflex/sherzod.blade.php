@@ -39,7 +39,7 @@
                 </div><!-- container -->
             </div><!-- .topbar -->
             <div class="mainbar  color">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="logo">
                         <a href="/" class="brand">
                             <h3 style="color: #0f3e68">MY&nbspBEST<span style="color: #00A8FF">DOCTOR</span></h3>
@@ -171,7 +171,7 @@
 
                     <label class="mobile_collapser"><span>MENU</span></label> <!-- Mobile menu title -->
                 </div>
-            </div>
+            </div> <!-- / topbar -->
 
         </div>
 
@@ -208,7 +208,7 @@
         </div>
         <div class="main foo" data-colorset="foo">
             <section class="vc_row wpb_row vc_row-fluid no_bottom_padding">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
 
                         @include('healthflex.include.sherzod')

@@ -22,10 +22,10 @@
     <meta name="twitter:title" content="Home - HEALTHFLEX">
     <meta name="twitter:site" content="@plethorathemes">
     <meta name="twitter:creator" content="@plethorathemes">
-    <script type="text/javascript" async="" src="healthflex_files/analytics.js"></script>
-    <script type="text/javascript" async="" src="healthflex_files/f.txt"></script>
-    <script src="healthflex_files/407134556812816" async=""></script>
-    <script async="" src="healthflex_files/fbevents.js"></script>
+    <script type="text/javascript" async="" src="/healthflex_files/analytics.js"></script>
+    <script type="text/javascript" async="" src="/healthflex_files/f.txt"></script>
+    <script src="/healthflex_files/407134556812816" async=""></script>
+    <script async="" src="/healthflex_files/fbevents.js"></script>
     <script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">
         {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://plethorathemes.com/healthflex/#website","url":"https://plethorathemes.com/healthflex/","name":"HEALTHFLEX","description":"Medical Wordpress Theme","potentialAction":{"@type":"SearchAction","target":"https://plethorathemes.com/healthflex/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://plethorathemes.com/healthflex/#webpage","url":"https://plethorathemes.com/healthflex/","inLanguage":"en-US","name":"Home - HEALTHFLEX","isPartOf":{"@id":"https://plethorathemes.com/healthflex/#website"},"datePublished":"2015-09-28T16:00:31+00:00","dateModified":"2016-10-10T14:30:26+00:00"}]}
     </script>
@@ -84,7 +84,7 @@
             })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji)))
         }(window, document, window._wpemojiSettings);
     </script>
-    <script src="healthflex_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+    <script src="/healthflex_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -99,42 +99,42 @@
             padding: 0 !important;
         }
     </style>
-    <link rel="stylesheet" href="healthflex_files/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/healthflex_files/assets/css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="healthflex_files/assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="healthflex_files/assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/all.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="healthflex_files/assets/css/style.css">
-    <link rel="stylesheet" id="wp-block-library-css" href="healthflex_files/style.min.css" type="text/css"
+    <link rel="stylesheet" href="/healthflex_files/assets/css/style.css">
+    <link rel="stylesheet" id="wp-block-library-css" href="/healthflex_files/style.min.css" type="text/css"
           media="all">
-    <link rel="stylesheet" id="wc-block-style-css" href="healthflex_files/style.css" type="text/css" media="all">
-    <link rel="stylesheet" id="contact-form-7-css" href="healthflex_files/styles.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wc-block-style-css" href="/healthflex_files/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="contact-form-7-css" href="/healthflex_files/styles.css" type="text/css" media="all">
     <style id="woocommerce-inline-inline-css" type="text/css">
         .woocommerce form .form-row .required {
             visibility: visible;
         }
     </style>
-    <link rel="stylesheet" id="owlcarousel2-css" href="healthflex_files/owl.carousel.css" type="text/css" media="all">
-    <link rel="stylesheet" id="owlcarousel2-theme-css" href="healthflex_files/owl.theme.default.css" type="text/css"
+    <link rel="stylesheet" id="owlcarousel2-css" href="/healthflex_files/owl.carousel.css" type="text/css" media="all">
+    <link rel="stylesheet" id="owlcarousel2-theme-css" href="/healthflex_files/owl.theme.default.css" type="text/css"
           media="all">
-    <link rel="stylesheet" id="js_composer_front-css" href="healthflex_files/js_composer.min.css" type="text/css"
+    <link rel="stylesheet" id="js_composer_front-css" href="/healthflex_files/js_composer.min.css" type="text/css"
           media="all">
-    <link rel="stylesheet" id="plethora-icons-css" href="healthflex_files/plethora_icons.css" type="text/css"
+    <link rel="stylesheet" id="plethora-icons-css" href="/healthflex_files/plethora_icons.css" type="text/css"
           media="all">
-    <link rel="stylesheet" id="plethora-woocommerce-css" href="healthflex_files/woocommerce.css" type="text/css"
+    <link rel="stylesheet" id="plethora-woocommerce-css" href="/healthflex_files/woocommerce.css" type="text/css"
           media="all">
-    <link rel="stylesheet" id="animate-css" href="healthflex_files/animate.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="plethora-custom-bootstrap-css" href="healthflex_files/theme_custom_bootstrap.css"
+    <link rel="stylesheet" id="animate-css" href="/healthflex_files/animate.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="plethora-custom-bootstrap-css" href="/healthflex_files/theme_custom_bootstrap.css"
           type="text/css" media="all">
-    <link rel="stylesheet" id="plethora-dynamic-style-css" href="healthflex_files/style-39924517bc.css"
+    <link rel="stylesheet" id="plethora-dynamic-style-css" href="/healthflex_files/style-39924517bc.css"
           type="text/css" media="all">
-    <link rel="stylesheet" id="plethora-style-css" href="healthflex_files/style(1).css" type="text/css" media="all">
-    <link rel="stylesheet" id="redux-google-fonts-plethora_options-css" href="healthflex_files/css" type="text/css"
+    <link rel="stylesheet" id="plethora-style-css" href="/healthflex_files/style(1).css" type="text/css" media="all">
+    <link rel="stylesheet" id="redux-google-fonts-plethora_options-css" href="/healthflex_files/css" type="text/css"
           media="all">
-    <script type="text/javascript" src="healthflex_files/jquery.js"></script>
-    <script type="text/javascript" src="healthflex_files/jquery-migrate.min.js"></script>
-    <script type="text/javascript" src="healthflex_files/jquery.blockUI.min.js"></script>
+    <script type="text/javascript" src="/healthflex_files/jquery.js"></script>
+    <script type="text/javascript" src="/healthflex_files/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="/healthflex_files/jquery.blockUI.min.js"></script>
     <script type="text/javascript">
         /* <![CDATA[ */
         var wc_add_to_cart_params = {
@@ -148,20 +148,20 @@
         /* ]]> */
     </script>
     <!-- jQuery -->
-    <script src="./healthflex_files/assets/js/jquery.min.js"></script>
+    <script src="/healthflex_files/assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JS -->
-    <script src="./healthflex_files/assets/js/popper.min.js"></script>
-    <script src="./healthflex_files/assets/js/bootstrap.min.js"></script>
+    <script src="/healthflex_files/assets/js/popper.min.js"></script>
+    <script src="/healthflex_files/assets/js/bootstrap.min.js"></script>
 
     <!-- Slick JS -->
-    <script src="./healthflex_files/assets/js/slick.js"></script>
+    <script src="/healthflex_files/assets/js/slick.js"></script>
 
     <!-- Custom JS -->
-    <script src="./healthflex_files/assets/js/script.js"></script>
-    <script type="text/javascript" src="healthflex_files/add-to-cart.min.js"></script>
-    <script type="text/javascript" src="healthflex_files/woocommerce-add-to-cart.js"></script>
-    <script type="text/javascript" src="healthflex_files/modernizr.custom.48287.js"></script>
+    <script src="/healthflex_files/assets/js/script.js"></script>
+    <script type="text/javascript" src="/healthflex_files/add-to-cart.min.js"></script>
+    <script type="text/javascript" src="/healthflex_files/woocommerce-add-to-cart.js"></script>
+    <script type="text/javascript" src="/healthflex_files/modernizr.custom.48287.js"></script>
     <link rel="https://api.w.org/" href="/wp-json/">
     <link rel="EditURI" type="application/rsd+xml" title="RSD"
           href="/xmlrpc.php?rsd">
@@ -202,7 +202,7 @@
         /></noscript>
     <!-- DO NOT MODIFY -->
     <!-- End Facebook Pixel Code -->
-    <script async="" src="healthflex_files/js"></script>
+    <script async="" src="/healthflex_files/js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -214,7 +214,7 @@
 
         gtag('config', 'AW-914993951');
     </script>
-    <script async="" src="healthflex_files/js(1)"></script>
+    <script async="" src="/healthflex_files/js(1)"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -285,7 +285,8 @@
         .sep_angled_positive_bottom .separator_bottom:before {
             right: 49.8% !important;
         }            </style>
-    <script src="./healthflex_files/f(1).txt"></script>
+    <script src="/healthflex_files/f(1).txt"></script>
     <style piggy-ext="" data-styled-version="4.2.0"></style>
     <style piggy-ext="" data-styled-version="4.2.0"></style>
+
 </head>

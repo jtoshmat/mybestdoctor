@@ -1,12 +1,12 @@
 /*!
 Theme Name: HEALTHFLEX
 Theme URI: http://plethorathemes.com/healthflex/
-Description: Medical Wordpress Theme 
+Description: Medical Wordpress Theme
 Version: 1.0.0
 Author: Plethora Themes
 Author URI: http://www.plethorathemes.com
 */
-/* 
+/*
     TABLE OF CONTENTS
 =================================================================
 
@@ -26,7 +26,7 @@ Author URI: http://www.plethorathemes.com
 
     7. =DESIGN ELEMENTS
 
-    8. =BLOG PAGE 
+    8. =BLOG PAGE
 
     9. =SIDEBAR & WIDGETS
 
@@ -40,32 +40,32 @@ Author URI: http://www.plethorathemes.com
 
 =================================================================
 */
-/* 
-================================================================= 
+/*
+=================================================================
 
 
 0. =BOOTSTRAP FRAMEWORK REFERENCE IMPORTS
 
 In "style.less" we reference some of Bootstrap's .less files in order to take advantage of their classes and mixins.
-We also reference the "theme_variables.less" in order to override the original variables and make our custom theme. 
+We also reference the "theme_variables.less" in order to override the original variables and make our custom theme.
 A customized "theme_custom_bootstrap.css" is also loaded by the theme in a precompiled minified css version.
-================================================================= 
+=================================================================
 */
 /*!
- ______ _____   _______ _______ _______ _______ ______ _______ 
+ ______ _____   _______ _______ _______ _______ ______ _______
 |   __ \     |_|    ___|_     _|   |   |       |   __ \   _   |
 |    __/       |    ___| |   | |       |   -   |      <       |
 |___|  |_______|_______| |___| |___|___|_______|___|__|___|___|
 
 P L E T H O R A T H E M E S . C O M                    (c) 2015
-                        
+
 Theme Name: HEALTHFLEX
 THEME STYLES v.1.0.1
-=============================================================== 
+===============================================================
 */
-/* 
+/*
 1. =THEME MIXINS GENERAL HELPER STYLES & CLASSES
-=============================================================== 
+===============================================================
 */
 .background_cover {
   -webkit-background-size: cover;
@@ -92,13 +92,13 @@ THEME STYLES v.1.0.1
 }
 .full_height {
   min-height: calc(100vh -  78px);
-  min-height: -o-calc(100vh -  78px);
+
   min-height: -webkit-calc(100vh -  78px);
   min-height: -moz-calc(100vh -  78px);
 }
 .transparent_header .full_height {
   min-height: calc(100vh);
-  min-height: -o-calc(100vh);
+
   min-height: -webkit-calc(100vh);
   min-height: -moz-calc(100vh);
 }
@@ -686,9 +686,9 @@ i.fa.white_section {
     margin-bottom: 31px !important;
   }
 }
-/* 
+/*
 2. =BUTTONS
-=============================================================== 
+===============================================================
 */
 .btn {
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1453,9 +1453,9 @@ input[type="button"].btn-block {
 .btn.with-icon.btn-success i {
   background-color: #357935;
 }
-/* 
+/*
 3. =BODY & TYPOGRAPHY
-=============================================================== 
+===============================================================
 */
 body {
   -webkit-font-smoothing: antialiased;
@@ -1559,7 +1559,7 @@ h6,
 .h6 {
   font-size: 13px;
 }
-/* =Responsive: Small devices (SM) Tablets (Mobile Menu) 
+/* =Responsive: Small devices (SM) Tablets (Mobile Menu)
 -------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   h1,
@@ -1692,16 +1692,16 @@ table > tbody + tbody {
 table .table {
   background-color: #efefef;
 }
-/* 
+/*
 4. =THE HEADER, LOGO & PRIMARY MENU
-=============================================================== 
+===============================================================
 */
 /*
---------------------------------------------------------------  
- 
+--------------------------------------------------------------
+
 THE HEADER ELEMENT
 
--------------------------------------------------------------- 
+--------------------------------------------------------------
 */
 .header {
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1778,11 +1778,11 @@ body.sticky_header .header {
   transform: translate(-250px, 0px);
 }
 /*
---------------------------------------------------------------  
- 
+--------------------------------------------------------------
+
 THE LOGO
 
--------------------------------------------------------------- 
+--------------------------------------------------------------
 */
 .logo {
   margin: 20px 0;
@@ -1808,7 +1808,7 @@ THE LOGO
   margin: 0;
   color: #555555;
 }
-/* =Responsive: Small devices (SM) Tablets (Mobile Menu) 
+/* =Responsive: Small devices (SM) Tablets (Mobile Menu)
 -------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   .logo {
@@ -1841,11 +1841,11 @@ THE LOGO
   }
 }
 /*
---------------------------------------------------------------  
- 
+--------------------------------------------------------------
+
 THE PRIMARY MENU
 
--------------------------------------------------------------- 
+--------------------------------------------------------------
 */
 label.mobile_collapser,
 span.close_menu {
@@ -2245,7 +2245,7 @@ span.close_menu {
     right: 5px;
   }
 }
-/* =Responsive: Small devices (SM) Tablets (Mobile Menu) 
+/* =Responsive: Small devices (SM) Tablets (Mobile Menu)
 -------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   label.mobile_collapser {
@@ -2432,11 +2432,11 @@ span.close_menu {
   }
 }
 /*
---------------------------------------------------------------  
- 
+--------------------------------------------------------------
+
 NAVIGATION SOCIAL ICONS
 
--------------------------------------------------------------- 
+--------------------------------------------------------------
 */
 a.social_links {
   position: absolute;
@@ -2506,9 +2506,9 @@ a.social_links {
   transform: translate(0, 100%);
   z-index: 1;
 }
-/* 
+/*
 5. =THE HEAD PANEL AREA
-=============================================================== 
+===============================================================
 */
 .head_panel {
   -webkit-transition: all 300ms ease-in-out;
@@ -2920,9 +2920,9 @@ a.social_links {
 .map img {
   max-width: none !important;
 }
-/* 
+/*
 6. =THE MAIN AREA & THE ROOT SECTION ELEMENT
-=============================================================== 
+===============================================================
 */
 .main {
   position: relative;
@@ -3470,9 +3470,9 @@ section[class*="_section"] div[class*="_section"] .body-bg_section a i {
   margin-bottom: 20px;
   margin-top: 0;
 }
-/* 
+/*
 7. =DESIGN ELEMENTS
-=============================================================== 
+===============================================================
 */
 /*** TESTIMONIAL ***/
 .testimonial li {
@@ -4967,16 +4967,16 @@ ul.portfolio_filters li a.active:hover {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
-/* 
+/*
 8. =BLOG PAGE ELEMENTS
-=============================================================== 
+===============================================================
 */
 /*
---------------------------------------------------------------  
- 
+--------------------------------------------------------------
+
 BLOG PAGE ELEMENTS
 
--------------------------------------------------------------- 
+--------------------------------------------------------------
 */
 article.post {
   padding-bottom: 34px;
@@ -5155,7 +5155,7 @@ article.post.sticky a i {
 }
 /*
 9. =SIDEBAR AND WIDGETS
-=============================================================== 
+===============================================================
 */
 .wpb_widgetised_column {
   padding-top: 4px;
@@ -5202,9 +5202,9 @@ article.post.sticky a i {
   width: 50%;
   right: 1.5%;
 }
-/* 
+/*
  =PL About Us Widget
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .pl_about_us_widget p {
   margin-bottom: 21px;
@@ -5317,9 +5317,9 @@ footer .pl_about_us_widget p span a:active {
 .team_social i.fa-foursquare {
   background-color: #0072b1;
 }
-/* 
+/*
  =PL Latest News & Portfolio Widgets
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .pl_latest_portfolio_widget ul.media-list,
 .pl_latest_news_widget ul.media-list {
@@ -5384,9 +5384,9 @@ footer .pl_about_us_widget p span a:active {
   background-color: #000000;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* 
+/*
  =Widget TagCloud
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .tagcloud {
   overflow: hidden;
@@ -5416,9 +5416,9 @@ footer .tagcloud a:hover {
   margin: 0 10px 10px 0;
   padding: 10px;
 }
-/* 
+/*
  =Widget Navs & Lists
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .widget_nav_menu,
 .widget_pages,
@@ -5623,9 +5623,9 @@ footer .tagcloud a:hover {
 .widget_rss ul li {
   margin-bottom: 10px;
 }
-/* 
+/*
  =Widget Flickr
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 #latest-flickr-images ul {
   margin: 0;
@@ -5657,9 +5657,9 @@ footer .tagcloud a:hover {
   max-width: 100%;
   vertical-align: middle;
 }
-/* 
+/*
  =Widget Calendar
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 #wp-calendar {
   width: 100%;
@@ -5704,9 +5704,9 @@ footer .tagcloud a:hover {
   text-transform: uppercase;
   padding-top: 10px;
 }
-/* 
+/*
  =Rest Widgets
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .widget_ads a {
   display: inline-block;
@@ -5727,9 +5727,9 @@ footer .tagcloud a:hover {
 .widget_categories label {
   margin-right: 5px;
 }
-/* 
+/*
 10. =FOOTER WIDGETIZED AREA
-=============================================================== 
+===============================================================
 */
 footer {
   background-color: #2c4167;
@@ -5768,13 +5768,13 @@ footer .widget {
   height: auto !important;
   font-size: 14px;
 }
-/* 
+/*
 11. =BOOTSTRAP ELEMENTS OVERRIDES
-=============================================================== 
+===============================================================
 */
-/* 
+/*
 X. =BOOTSTRAP ELEMENTS OVERRIDES
-=============================================================== 
+===============================================================
 */
 .bs-example-tabs .nav-tabs {
   margin-bottom: 15px;
@@ -5837,9 +5837,9 @@ X. =BOOTSTRAP ELEMENTS OVERRIDES
     font-size: 63px;
   }
 }
-/* 
+/*
 12. =MISC STYLES
-=============================================================== 
+===============================================================
 */
 img {
   max-width: 100%;
@@ -5902,9 +5902,9 @@ i.fa.danger {
   border: none;
   width: 100%;
 }
-/* 
+/*
  =The Events Calendar Plugin
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .single-tribe_events .tribe-events-schedule {
   margin: 0 0 10px 0;
@@ -5932,9 +5932,9 @@ a.tribe-events-gmap:active {
 .tribe-events-event-categories a:active {
   color: #21759B !important;
 }
-/* 
+/*
  =3D Links Effect
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .roll {
   display: inline-block;
@@ -5967,9 +5967,9 @@ a.tribe-events-gmap:active {
   transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
   transform-origin: 50% 0%;
 }
-/* 
+/*
  = BACK TO TOP BUTTON
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 #return-to-top {
   position: fixed;
@@ -6138,17 +6138,17 @@ ul.owl-carousel {
   height: 100%;
   width: auto;
 }
-/* 
+/*
  =WPML
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .wpml-ls-menu-item a img {
   vertical-align: top !important;
   max-width: 30px !important;
 }
-/* 
+/*
  =CF7 Acceptance Checkbox Fix
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .wpcf7-form-control.wpcf7-acceptance {
   padding-left: 0;
@@ -6164,9 +6164,9 @@ ul.owl-carousel {
 .wpcf7-form-control.wpcf7-acceptance .wpcf7-list-item {
   margin-left: 0;
 }
-/* 
+/*
  =VC 5-Column Layouts
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .non_responsive .row .col-sm-1\/5 {
   position: relative;
@@ -6597,11 +6597,11 @@ ul.owl-carousel {
     margin-left: 0;
   }
 }
-/* 
+/*
 13. =RESPONSIVE STATES
-=============================================================== 
+===============================================================
 */
-/* =Responsive: Small devices (SM) Tablets (Mobile Menu) 
+/* =Responsive: Small devices (SM) Tablets (Mobile Menu)
 -------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   /*** HEAD PANEL ***/
@@ -6727,13 +6727,13 @@ ul.owl-carousel {
     transform: translate(0px, 0px);
   }
 }
-/* 
+/*
 14. =WORDPRESS STYLES
-=============================================================== 
+===============================================================
 */
-/* 
+/*
  =WP General Styles
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 .aligncenter {
   display: block;
@@ -6788,17 +6788,17 @@ ul.owl-carousel {
   margin: 0 !important;
   max-height: 1em;
 }
-/* 
+/*
  =Admin-bar Fix
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 body.admin-bar.sticky_header .overflow_wrapper,
 body.admin-bar.sticky_header .header {
   margin-top: 30px;
 }
-/* 
+/*
  =Visual Composer Adjustments
- -------------------------------------------------------------- 
+ --------------------------------------------------------------
 */
 @media (max-width: 991px) {
   .vc_row .row {
@@ -6880,9 +6880,9 @@ body.admin-bar.sticky_header .header {
 .vc_message_box-icon > .fa {
   top: 16px;
 }
-/* 
+/*
 14. =WOOCOMMERCE STYLES
-=============================================================== 
+===============================================================
 */
 /*!
 Theme Name: HEALTH-X
@@ -8874,9 +8874,9 @@ fieldset[disabled] .widget_product_search input#searchsubmit.active {
     width: 100%;
   }
 }
-/* 
+/*
 15. =ECWID STYLES
-=============================================================== 
+===============================================================
 */
 /******************************************************************************/
 /******************** GENERAL STYLES ******************************************/
@@ -9504,9 +9504,9 @@ html#ecwid_html body#ecwid_body table.ecwid-Checkout-blockTitle div.gwt-HTML {
 html#ecwid_html body#ecwid_body td.ecwid-Invoice-cell {
   background-color: #ffffff !important;
 }
-/* 
+/*
 16. =RTL STYLES
-=============================================================== 
+===============================================================
 */
 body.rtl {
   /* WIDGETS */

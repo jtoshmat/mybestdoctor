@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <footer class="sep_angled_positive_top separator_top ">
         <div class="container">
             <div class="row">
@@ -11,8 +11,8 @@
 
                             <p>
                                 <img
-                                    src="https://plethorathemes.com/healthflex/wp-content/uploads/2013/06/healthflex_logo_white.png"
-                                    alt="" style="max-"></p>
+                                    src="healthflex_files/logo.png"
+                                    alt="" style=""></p>
 
 
                             <p>Premium Wordpress Theme mainly Medical Oriented but so flexible that lets you build
@@ -108,7 +108,7 @@
 
                                     <a href="/blog/2015/11/23/daily-exercise-is-essential-for-your-health/"
                                        class="media-photo"
-                                       style="background-image:url(' https://plethorathemes.com/healthflex/wp-content/uploads/2015/11/woman_running-150x150.jpg ')"></a>
+                                       style="background-image:url('https://thumbs.gfycat.com/RequiredThinAbalone-poster.jpg')"></a>
 
                                     <h5 class="media-heading">
                                         <a href="/blog/2015/11/23/daily-exercise-is-essential-for-your-health/">Daily
@@ -150,9 +150,10 @@
                         </div>
 
                     </aside>
-
-                    <!-- END================== LATEST NEWS: MUSTACHE ========================--></div>
+                </div>
+                    <!-- END================== LATEST NEWS: MUSTACHE ========================-->
             </div>
         </div>
+
     </footer>
 </div>
