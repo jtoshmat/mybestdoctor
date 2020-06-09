@@ -103,6 +103,7 @@
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="/healthflex_files/assets/css/style.css">
@@ -110,6 +111,11 @@
           media="all">
     <link rel="stylesheet" id="wc-block-style-css" href="/healthflex_files/style.css" type="text/css" media="all">
     <link rel="stylesheet" id="contact-form-7-css" href="/healthflex_files/styles.css" type="text/css" media="all">
+
+    <link href="/healthflex_files/assets/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/healthflex_files/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/healthflex_files/assets/css/theme_style.css" rel="stylesheet" type="text/css" />
+
     <style id="woocommerce-inline-inline-css" type="text/css">
         .woocommerce form .form-row .required {
             visibility: visible;

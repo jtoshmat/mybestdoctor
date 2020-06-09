@@ -14,6 +14,7 @@
 
                         <!-- Search -->
                         <div class="search-box">
+
                             <form action="/search" method="GET">
                                 <div class="form-group search-location">
                                     <input type="text" name="cityKey" value="{{ request()->input('cityKey') }}" class="form-control" list="shahar" placeholder="Shaharni izlash">
@@ -37,7 +38,8 @@
                                     <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                                 </div>
                                 <div class="form-group search-info">
-                                    <input type="text" name="key" value="{{ request()->input('key') }}" class="form-control" placeholder="Search Doctors, Clinics, Hospitals">
+
+                                    <input type="text" class="form-control" name="key" value="{{request()->input('key')}}" placeholder="Search Doctors, Clinics, Hospitals">
                                     <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                                 </div>
                                 <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>

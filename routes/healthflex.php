@@ -1,7 +1,5 @@
 <?php
-Route::get('/search', function () {
-    return view('healthflex.search');
-});
+
 
 Route::get('/about-us', function () {
     return view('healthflex.aboutus');
@@ -76,21 +74,33 @@ Route::get('/blank', function () {
     return view('healthflex.blank');
 });
 Route::get('/sherzod', 'PublicController@sherzod');
+Route::get('/search', 'PublicController@search');
+Route::get('/search2', 'PublicController@search2');
 Route::get('/khursan', 'PublicController@khursan');
 Route::get('/khursand', 'PublicController@khursand');
+
+Route::get('/register2', 'PublicController@register2');
+Route::get('/patient-register', 'PublicController@patientRegister');
+
 Route::get('/search', 'PublicController@search');
 
 Route::prefix('doctor')->group(function() {
     Route::get('/login', 'Auth\DoctorLoginController@showLoginForm')->name('doctor.login');
     Route::post('/login', 'Auth\DoctorLoginController@login')->name('doctor.login.submit');
     Route::get('/dashboard', 'DoctorController@index')->name('doctor.dashboard');
+    Route::get('/profile-settings', 'DoctorController@profile_settings')->name('doctor.profile-settings');
+    Route::post('/profile-settings', 'DoctorController@update_avatar');
+    Route::get('/appointments', 'DoctorController@appointments')->name('doctor.appointments');
+    Route::get('/my-patients', 'DoctorController@my_patients')->name('doctor.my-patients');
+    Route::get('/schedule-timings', 'DoctorController@schedule_timings')->name('doctor.schedule-timings');
+    Route::get('/invoices', 'DoctorController@invoices')->name('doctor.invoices');
 // Password reset
 
-    Route::get('/password/email', 'Auth\DoctorForgotPasswordController@sendResetLinkEmail')->name('doctor.password.email');
+    Route::any('/password/email', 'Auth\DoctorForgotPasswordController@sendResetLinkEmail')->name('doctor.password.email');
     Route::get('/password/reset', 'Auth\DoctorForgotPasswordController@showLinkRequestForm')->name('doctor.password.request');
     Route::post('/password/reset', 'Auth\DoctorResetPasswordController@reset');
     Route::get('/password/reset/{token}', 'Auth\DoctorResetPasswordController@showResetForm')->name('doctor.password.reset');
 
-
 });
+
 

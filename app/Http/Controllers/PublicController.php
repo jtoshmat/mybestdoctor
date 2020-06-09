@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Intervention\Image\Facades\Image;;
 use Illuminate\Http\Request;
 use App\Doctor_list;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 {
@@ -24,12 +26,12 @@ class PublicController extends Controller
         $key = $request->key;
 
 
-            $doctors = Doctor_list::where('speciality_title', 'LIKE', '%' . $key . '%')->
-            where('location', 'LIKE', '%' . $cityKey . '%')->
-            orWhere('doctors_name', 'LIKE', '%' . $key . '%')->
-            where('location', 'LIKE', '%' . $cityKey . '%')->
-            orWhere('speciality_type', 'LIKE', '%' . $key . '%')->
-            where('location', 'LIKE', '%' . $cityKey . '%');
+        $doctors = Doctor_list::where('speciality_title', 'LIKE', '%' . $key . '%')->
+        where('location', 'LIKE', '%' . $cityKey . '%')->
+        orWhere('doctors_name', 'LIKE', '%' . $key . '%')->
+        where('location', 'LIKE', '%' . $cityKey . '%')->
+        orWhere('speciality_type', 'LIKE', '%' . $key . '%')->
+        where('location', 'LIKE', '%' . $cityKey . '%');
 
 
         switch (request('sortBy')) {
@@ -53,6 +55,7 @@ class PublicController extends Controller
 
 
     }
+
 
 
 

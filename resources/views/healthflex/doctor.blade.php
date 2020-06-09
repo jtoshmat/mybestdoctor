@@ -36,8 +36,11 @@
                         @else
                             <ul class="main-nav">
                                 <li class="has-submenu active">
-                                    <a href="#">Doctors <i class="fas fa-chevron-down"></i></a>
+                                    <a href="#">{{ Auth::guard('doctor')->user()->name }} <i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu">
+                                        <li>
+                                            <a href="{{ ('dashboard') }}">Doctors Dashboard</a>
+                                        </li>
                                         <li>
                                             <a href="{{ ('profile-settings') }}">Profile Settings</a>
                                         </li>
@@ -90,13 +93,13 @@
                             <div class="widget-profile pro-widget-content">
                                 <div class="profile-info-widget">
                                     <a href="#" class="booking-doc-img">
-                                        <img src="/healthflex_files/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+                                        <img src="/healthflex_files/uploads/avatars/{{ Auth::guard('doctor')->user()->avatar }}" alt="User Image">
                                     </a>
                                     <div class="profile-det-info">
-                                        <h3>Dr. Darren Elder</h3>
+                                        <h3>{{ Auth::guard('doctor')->user()->name }}</h3>
 
                                         <div class="patient-details">
-                                            <h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+                                            <h5 class="mb-0">{{ Auth::guard('doctor')->user()->speciality_title }}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -104,40 +107,34 @@
                             <div class="dashboard-widget">
                                 <nav class="dashboard-menu">
                                     <ul>
-                                        <li class="active">
-                                            <a href="">
+                                        <li class="{{ Request::path('doctor/dashboard') ? 'active' : '' }}">
+                                            <a href="{{ route('doctor.dashboard') }}">
                                                 <i class="fas fa-columns"></i>
                                                 <span>Dashboard</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="appointments">
+                                        <li class="{{ Request::path() ==='doctor/appointments' ? 'active' : '' }}">
+                                            <a href="{{ route('doctor.appointments') }}">
                                                 <i class="fas fa-calendar-check"></i>
                                                 <span>Appointments</span>
                                             </a>
                                         </li>
-                                        <li>
+                                        <li class="{{ Request::path() ==='doctor/my-patients' ? 'active' : '' }}">
                                             <a href="my-patients">
                                                 <i class="fas fa-user-injured"></i>
                                                 <span>My Patients</span>
                                             </a>
                                         </li>
-                                        <li>
+                                        <li class="{{ Request::path() ==='doctor/schedule-timings' ? 'active' : '' }}">
                                             <a href="schedule-timings">
                                                 <i class="fas fa-hourglass-start"></i>
                                                 <span>Schedule Timings</span>
                                             </a>
                                         </li>
-                                        <li>
+                                        <li class="{{ Request::path() ==='doctor/invoices' ? 'active' : '' }}">
                                             <a href="invoices">
                                                 <i class="fas fa-file-invoice"></i>
                                                 <span>Invoices</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="reviews">
-                                                <i class="fas fa-star"></i>
-                                                <span>Reviews</span>
                                             </a>
                                         </li>
                                         <li>
@@ -147,8 +144,8 @@
                                                 <small class="unread-msg">23</small>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="doctor-profile-settings">
+                                        <li class="{{ Request::path() ==='doctor/profile-settings' ? 'active' : '' }}">
+                                            <a href="profile-settings">
                                                 <i class="fas fa-user-cog"></i>
                                                 <span>Profile Settings</span>
                                             </a>
@@ -179,9 +176,24 @@
 
                     </div>
 
+
+
                     <div class="col-md-7 col-lg-8 col-xl-9">
 
+
                         <div class="row">
+                            <div class="page-title-breadcrumb pl-md-5">
+                                <div class=" pull-left">
+                                    <div class="page-title">Dashboard</div>
+                                    <div class="card-body">--}}
+                                                                        @if (session('status'))
+                                                                            <div class="alert alert-success" role="alert">
+                                                                                {{ session('status') }}
+                                                                            </div>
+                                                                        @endif
+                                </div>
+
+                            </div>
                             <div class="col-md-12">
                                 <div class="card dash-card">
                                     <div class="card-body">
@@ -236,392 +248,163 @@
                             </div>
                         </div>
 
+                        <!-- start admited patient list -->
                         <div class="row">
-                            <div class="col-md-12">
-                                <h4 class="mb-4">Patient Appoinment</h4>
-                                <div class="appointment-tab">
-
-                                    <!-- Appointment Tab -->
-                                    <ul class="nav nav-tabs nav-tabs-solid nav-tabs-rounded">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#upcoming-appointments" data-toggle="tab">Upcoming</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#today-appointments" data-toggle="tab">Today</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /Appointment Tab -->
-
-                                    <div class="tab-content">
-
-                                        <!-- Upcoming Appointment Tab -->
-                                        <div class="tab-pane show active" id="upcoming-appointments">
-                                            <div class="card card-table mb-0">
-                                                <div class="card-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover table-center mb-0">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>Patient Name</th>
-                                                                <th>Appt Date</th>
-                                                                <th>Purpose</th>
-                                                                <th>Type</th>
-                                                                <th class="text-center">Paid Amount</th>
-                                                                <th></th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Richard Wilson <span>#PT0016</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>11 Nov 2019 <span class="d-block text-info">10.00 AM</span></td>
-                                                                <td>General</td>
-                                                                <td>New Patient</td>
-                                                                <td class="text-center">$150</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient1.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Charlene Reed <span>#PT0001</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>3 Nov 2019 <span class="d-block text-info">11.00 AM</span></td>
-                                                                <td>General</td>
-                                                                <td>Old Patient</td>
-                                                                <td class="text-center">$200</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient2.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Travis Trimble  <span>#PT0002</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>1 Nov 2019 <span class="d-block text-info">1.00 PM</span></td>
-                                                                <td>General</td>
-                                                                <td>New Patient</td>
-                                                                <td class="text-center">$75</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient3.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Carl Kelly <span>#PT0003</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>30 Oct 2019 <span class="d-block text-info">9.00 AM</span></td>
-                                                                <td>General</td>
-                                                                <td>Old Patient</td>
-                                                                <td class="text-center">$100</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient4.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Michelle Fairfax <span>#PT0004</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>28 Oct 2019 <span class="d-block text-info">6.00 PM</span></td>
-                                                                <td>General</td>
-                                                                <td>New Patient</td>
-                                                                <td class="text-center">$350</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient5.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Gina Moore <span>#PT0005</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>27 Oct 2019 <span class="d-block text-info">8.00 AM</span></td>
-                                                                <td>General</td>
-                                                                <td>Old Patient</td>
-                                                                <td class="text-center">$250</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="card  card-box">
+                                    <div class="card-head">
+                                        <header>ADMIT PATIENT LIST</header>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-wrap">
+                                            <div class="table-responsive">
+                                                <table class="table display product-overview mb-30" id="support_table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Date of Birth</th>
+                                                        <th>Date Of Admit</th>
+                                                        <th>Diseases</th>
+                                                        <th>Room No</th>
+                                                        <th>Edit</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Jens Brincker</td>
+                                                        <td>08/20/1970</td>
+                                                        <td>27/05/2016</td>
+                                                        <td>
+                                                            <span class="label label-sm label-success">Influenza</span>
+                                                        </td>
+                                                        <td>101</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash-o"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Mark Hay</td>
+                                                        <td>Dr. Mark</td>
+                                                        <td>26/05/2017</td>
+                                                        <td>
+                                                            <span class="label label-sm label-warning"> Cholera </span>
+                                                        </td>
+                                                        <td>105</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Anthony Davie</td>
+                                                        <td>Dr.Cinnabar</td>
+                                                        <td>21/05/2016</td>
+                                                        <td>
+															<span
+                                                                class="label label-sm label-success ">Amoebiasis</span>
+                                                        </td>
+                                                        <td>106</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash-o"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>David Perry</td>
+                                                        <td>Dr.Felix </td>
+                                                        <td>20/04/2016</td>
+                                                        <td>
+                                                            <span class="label label-sm label-danger">Jaundice</span>
+                                                        </td>
+                                                        <td>105</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Anthony Davie</td>
+                                                        <td>Dr.Beryl</td>
+                                                        <td>24/05/2016</td>
+                                                        <td>
+															<span
+                                                                class="label label-sm label-success ">Leptospirosis</span>
+                                                        </td>
+                                                        <td>102</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Alan Gilchrist</td>
+                                                        <td>Dr.Joshep</td>
+                                                        <td>22/05/2016</td>
+                                                        <td>
+                                                            <span class="label label-sm label-warning ">Hepatitis</span>
+                                                        </td>
+                                                        <td>103</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Mark Hay</td>
+                                                        <td>Dr.Jayesh</td>
+                                                        <td>18/06/2016</td>
+                                                        <td>
+                                                            <span class="label label-sm label-success ">Typhoid</span>
+                                                        </td>
+                                                        <td>107</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Sue Woodger</td>
+                                                        <td>Dr.Sharma</td>
+                                                        <td>17/05/2016</td>
+                                                        <td>
+                                                            <span class="label label-sm label-danger">Malaria</span>
+                                                        </td>
+                                                        <td>108</td>
+                                                        <td><a href="javascript:void(0)" class="" data-toggle="tooltip"
+                                                               title="Edit"><i class="fa fa-check"></i></a>
+                                                            <a href="javascript:void(0)" class="text-inverse"
+                                                               title="Delete" data-toggle="tooltip"><i
+                                                                    class="fa fa-trash"></i></a></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                        <!-- /Upcoming Appointment Tab -->
-
-                                        <!-- Today Appointment Tab -->
-                                        <div class="tab-pane" id="today-appointments">
-                                            <div class="card card-table mb-0">
-                                                <div class="card-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover table-center mb-0">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>Patient Name</th>
-                                                                <th>Appt Date</th>
-                                                                <th>Purpose</th>
-                                                                <th>Type</th>
-                                                                <th class="text-center">Paid Amount</th>
-                                                                <th></th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient6.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Elsie Gilley <span>#PT0006</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>14 Nov 2019 <span class="d-block text-info">6.00 PM</span></td>
-                                                                <td>Fever</td>
-                                                                <td>Old Patient</td>
-                                                                <td class="text-center">$300</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient7.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Joan Gardner <span>#PT0006</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>14 Nov 2019 <span class="d-block text-info">5.00 PM</span></td>
-                                                                <td>General</td>
-                                                                <td>Old Patient</td>
-                                                                <td class="text-center">$100</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient8.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Daniel Griffing <span>#PT0007</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>14 Nov 2019 <span class="d-block text-info">3.00 PM</span></td>
-                                                                <td>General</td>
-                                                                <td>New Patient</td>
-                                                                <td class="text-center">$75</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient9.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile.html">Walter Roberson <span>#PT0008</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>14 Nov 2019 <span class="d-block text-info">1.00 PM</span></td>
-                                                                <td>General</td>
-                                                                <td>Old Patient</td>
-                                                                <td class="text-center">$350</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient10.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Robert Rhodes <span>#PT0010</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>14 Nov 2019 <span class="d-block text-info">10.00 AM</span></td>
-                                                                <td>General</td>
-                                                                <td>New Patient</td>
-                                                                <td class="text-center">$175</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <h2 class="table-avatar">
-                                                                        <a href="patient-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="/healthflex_files/assets/img/patients/patient11.jpg" alt="User Image"></a>
-                                                                        <a href="patient-profile">Harry Williams <span>#PT0011</span></a>
-                                                                    </h2>
-                                                                </td>
-                                                                <td>14 Nov 2019 <span class="d-block text-info">11.00 AM</span></td>
-                                                                <td>General</td>
-                                                                <td>New Patient</td>
-                                                                <td class="text-center">$450</td>
-                                                                <td class="text-right">
-                                                                    <div class="table-action">
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-                                                                            <i class="far fa-eye"></i> View
-                                                                        </a>
-
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-                                                                            <i class="fas fa-check"></i> Accept
-                                                                        </a>
-                                                                        <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                                                            <i class="fas fa-times"></i> Cancel
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Today Appointment Tab -->
-
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- end admited patient list -->
 
                     </div>
+
                 </div>
 
             </div>

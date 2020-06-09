@@ -1,3 +1,4 @@
+
 @include('healthflex.head')
 <div class="container-fluid">
     @yield('content')

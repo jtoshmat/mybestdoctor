@@ -5,6 +5,7 @@
     <div class="overflow_wrapper">
         <div class="header ">
             <div class="topbar vcenter transparent">
+
                 <div class="container-fluid">
                     <div class="row">
 
@@ -37,11 +38,12 @@
                 </div><!-- container -->
             </div><!-- .topbar -->
             <div class="mainbar  color">
+
                 <div class="container-fluid">
                     <div class="logo">
                         <a href="/" class="brand">
                             <img
-                                src="healthflex_files/logo.png"
+                                src="/healthflex_files/logo.png"
                                 alt="HealthFlex">
                         </a>
                     </div>
@@ -178,13 +180,17 @@
             <div class="diagonal_headings_layout">
                 <div class="hgroup">
                     <div class="title diagonal-bgcolor-trans body-bg_section   ">
+
                         <div class="container-fluid">
+
                             <h1>Appointment</h1>
                         </div>
                     </div>
 
                     <div class="subtitle body-bg_section   ">
+
                         <div class="container-fluid">
+
                             <span id="login" ><a href="khursan.blade.php">List your practice on My-best-doctor</a>|<a>Log in / Sign up</a></span>
                         </div>
                     </div>
@@ -206,23 +212,13 @@
         </div>
         <div class="main foo" data-colorset="foo">
             <section class="vc_row wpb_row vc_row-fluid no_bottom_padding">
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="wpb_column vc_column_container col-sm-12">
                             <div class="wpb_wrapper">
 
                                 @include('healthflex.include.khursan')
-
-
-
-
-
-
-
-
-
-
-
 
                                     <!-- Breadcrumb -->
                                     <div class="breadcrumb-bar">

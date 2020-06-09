@@ -24,11 +24,15 @@
                         </nav>
 
                         <h2 class="breadcrumb-title">Uzbekiston bo'ylab: {{ $doctors->count() }} ta Stamatolog topildi</h2>
+
                     </div>
                     <div class="col-md-4 col-12 d-md-block d-none">
                         <div class="sort-by">
                             <span class="sort-title">Sortlash</span>
                             <span class="sortby-fliter">
+
+{{--									<select class="select filter-select" data-column="0">--}}
+
 									<select name="sortBy" class="select">
 										<option>tanlang</option>
 										<option class="sorting" value="rate">rate</option>
@@ -49,6 +53,7 @@
 
             <!-- Search -->
             <div class="search-box">
+
                 <form action="/search" method="GET">
                     <div class="form-group search-location">
                         <input type="text" name="cityKey" id="cityKey" value="{{ request()->input('cityKey') }}" class="form-control" list="shahar" placeholder="Shaharni izlash">
@@ -72,7 +77,9 @@
                         <span class="form-text">Sizga kerak bo'lgan Shaharni kiriting yoki tanlang</span>
                     </div>
                     <div class="form-group search-info">
+
                         <input type="text" name="key" id="key" value="{{ request()->input('key') }}" class="form-control" placeholder="Search Doctors, Clinics, Hospitals">
+
                         <span class="form-text">masalan: Stomatolog yoki 5 chi shahar klinikasi</span>
                     </div>
                     <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Qidirish</span></button>
@@ -139,8 +146,6 @@
                 </div>
 
                 <div class="col-md-12 col-lg-8 col-xl-9">
-
-
 
                     <!-- Doctor Widget -->
                     @foreach($doctors as $doctor)
@@ -212,14 +217,11 @@
     </div>
     <!-- /Page Content -->
 
-
 </div>
-
 
 </body>
 @include('healthflex.allcssfiles')
 @include('healthflex.alljavascriptfiles')
 <!-- doccure/search.html  30 Nov 2019 04:12:16 GMT -->
 </html>
-
 @endsection

@@ -2,7 +2,7 @@
     <footer class="sep_angled_positive_top separator_top ">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-6 col-md-3">
                     <!-- ========================== WIDGET ABOUT US ==========================-->
 
                     <aside id="plethora-aboutus-widget-1" class="widget aboutus-widget">
@@ -11,7 +11,7 @@
 
                             <p>
                                 <img
-                                    src="healthflex_files/logo.png"
+                                    src="/healthflex_files/logo.png"
                                     alt="" style=""></p>
 
 
@@ -82,7 +82,7 @@
                             <p class="social">
 
                                 <a href='#' target='_blank' title="Twitter"><i class='fa fa-twitter'></i></a>
-                                <a href='#' target='_blank' title="Facebook"><i class='fa fa-facebook'></i></a>
+                                <a href='#' target='_blank' title="Facebook"><i class='fa fa-facebook-square'></i></a>
                                 <a href='#' target='_blank' title="Google+"><i class='fa fa-google-plus'></i></a>
                                 <a href='#' target='_blank' title="LinkedIn"><i class='fa fa-linkedin'></i></a>
                                 <a href='#' target='_blank' title="Skype"><i class='fa fa-skype'></i></a>
@@ -95,7 +95,7 @@
                     </aside>
 
                     <!-- END======================= WIDGET ABOUT US ==========================--></div>
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-12 col-md-6">
                     <!-- ===================== LATEST NEWS: MUSTACHE ========================-->
 
                     <aside id="plethora-latestnews-widget-1" class="widget latestnews-widget">
