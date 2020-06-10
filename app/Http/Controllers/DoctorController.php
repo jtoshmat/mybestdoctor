@@ -26,12 +26,12 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        return view('healthflex.doctor');
+        return view('healthflex.doctor.doctor');
     }
 
     public function profile_settings()
     {
-        return view('healthflex.profile-settings');
+        return view('healthflex.doctor.profile-settings');
     }
 
     public function update_avatar(Request $request)
@@ -54,7 +54,7 @@ class DoctorController extends Controller
 
     public function appointments()
     {
-        return view('healthflex.appointments');
+        return view('healthflex.doctor.appointments');
     }
 
     public function my_patients()

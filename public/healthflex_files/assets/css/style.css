@@ -1061,14 +1061,10 @@ button.bg-danger:hover {
 	border-width: 4px;
 }
 .avatar-group {
-    display: -ms-inline-flexbox;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 }
-
-.avatar-group {
-    display: -webkit-inline-box;
-}
-
 .avatar-group .avatar + .avatar {
 	margin-left: -.75rem;
 }

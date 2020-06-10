@@ -31,7 +31,7 @@
                             <span class="sort-title">Sortlash</span>
                             <span class="sortby-fliter">
 
-{{--									<select class="select filter-select" data-column="0">--}}
+									<select class="select filter-select" data-column="0">
 
 									<select name="sortBy" class="select">
 										<option>tanlang</option>

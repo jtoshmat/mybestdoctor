@@ -55,23 +55,6 @@
                                     </ul>
                                 </li>
                             </ul>
-{{--                                <li class="nav-item dropdown">--}}
-{{--                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
-{{--                                    {{ Auth::user()->name }}--}}
-{{--                                </a>--}}
-
-{{--                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
-{{--                                    <a class="dropdown-item" href="{{ route('logout') }}"--}}
-{{--                                       onclick="event.preventDefault();--}}
-{{--                                                     document.getElementById('logout-form').submit();">--}}
-{{--                                        {{ __('Logout') }}--}}
-{{--                                    </a>--}}
-
-{{--                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-{{--                                        @csrf--}}
-{{--                                    </form>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
                         @endguest
                     </ul>
                 </div>
@@ -86,82 +69,7 @@
                     <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 
                         <!-- Profile Sidebar -->
-                        <div class="profile-sidebar">
-                            <div class="widget-profile pro-widget-content">
-                                <div class="profile-info-widget">
-                                    <a href="#" class="booking-doc-img">
-                                        <img src="/healthflex_files/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
-                                    </a>
-                                    <div class="profile-det-info">
-                                        <h3>Dr. Darren Elder</h3>
-
-                                        <div class="patient-details">
-                                            <h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dashboard-widget">
-                                <nav class="dashboard-menu">
-                                    <ul>
-                                        <li class="active">
-                                            <a href="{{ route('doctor.dashboard') }}">
-                                                <i class="fas fa-columns"></i>
-                                                <span>Dashboard</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('doctor.appointments') }}">
-                                                <i class="fas fa-calendar-check"></i>
-                                                <span>Appointments</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('doctor.my-patients') }}">
-                                                <i class="fas fa-user-injured"></i>
-                                                <span>My Patients</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('doctor.schedule-timings') }}">
-                                                <i class="fas fa-hourglass-start"></i>
-                                                <span>Schedule Timings</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('doctor.invoices') }}">
-                                                <i class="fas fa-file-invoice"></i>
-                                                <span>Invoices</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="reviews">
-                                                <i class="fas fa-star"></i>
-                                                <span>Reviews</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('doctor.doctor-profile-settings') }}">
-                                                <i class="fas fa-user-cog"></i>
-                                                <span>Profile Settings</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="doctor-change-password">
-                                                <i class="fas fa-lock"></i>
-                                                <span>Change Password</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/sherzod">
-                                                <i class="fas fa-sign-out-alt"></i>
-                                                <span>Logout</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
+                       @include('healthflex.doctor.doctor-profile-sidebar')
                         <!-- /Profile Sidebar -->
 
                     </div>
@@ -615,28 +523,6 @@
 
         </div>
 @include('healthflex.alljavascriptfiles')
-        <!-- /Page Content -->
-{{--        <main class="py-4">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row justify-content-center">--}}
-{{--                    <div class="col-md-8">--}}
-{{--                        <div class="card">--}}
-{{--                            <div class="card-header">DOCTOR DASHBOARD</div>--}}
-
-{{--                            <div class="card-body">--}}
-{{--                                @if (session('status'))--}}
-{{--                                    <div class="alert alert-success" role="alert">--}}
-{{--                                        {{ session('status') }}--}}
-{{--                                    </div>--}}
-{{--                                @endif--}}
-
-{{--                                You are logged in as <strong>DOCTOR</strong>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </main>--}}
     </div>
     </body>
 
