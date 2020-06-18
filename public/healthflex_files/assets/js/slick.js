@@ -18,9 +18,9 @@
 ;(function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-        define(['jquery'], factory);
+        define(['public/healthflex_files/assets/js/jquery@2.2.4/jquery'], factory);
     } else if (typeof exports !== 'undefined') {
-        module.exports = factory(require('jquery'));
+        module.exports = factory(require('public/healthflex_files/assets/js/jquery@2.2.4/jquery'));
     } else {
         factory(jQuery);
     }

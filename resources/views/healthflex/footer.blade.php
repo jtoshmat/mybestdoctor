@@ -1,4 +1,4 @@
-<div class="container-fluid">
+
     <footer class="sep_angled_positive_top separator_top ">
         <div class="container">
             <div class="row">
@@ -156,4 +156,4 @@
         </div>
 
     </footer>
-</div>
+

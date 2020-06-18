@@ -21,6 +21,9 @@ class DoctorLoginController extends Controller
         return Auth::guard('doctor');
     }
 
+
+
+
     use AuthenticatesUsers;
     /**
      * Where to redirect users after login.
@@ -36,5 +39,12 @@ class DoctorLoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest:doctor')->except('logout');
+    }
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+        $request->session()->invalidate();
+        return redirect('/doctor/sherzod');
+
     }
 }

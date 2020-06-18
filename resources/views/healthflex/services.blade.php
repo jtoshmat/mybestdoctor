@@ -1165,7 +1165,8 @@
                     </div>
                 </div>      </div>
 
-        </div>		<footer class="sep_angled_positive_top separator_top ">
+        </div>
+        <footer class="sep_angled_positive_top separator_top ">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6"><!-- ========================== WIDGET ABOUT US ==========================-->

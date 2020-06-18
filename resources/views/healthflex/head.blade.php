@@ -1,7 +1,10 @@
+
+
 <!DOCTYPE html>
 <html
     class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js_active  vc_desktop  vc_transform  vc_transform "
     lang="en-US" style="">
+{{--header starts--}}
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -296,3 +299,4 @@
     <style piggy-ext="" data-styled-version="4.2.0"></style>
 
 </head>
+{{--header section ends--}}
