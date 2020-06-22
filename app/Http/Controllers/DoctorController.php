@@ -30,7 +30,7 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $myPatients = MyPatient::orderBy('created_at','desc')->paginate(10);
+        $myPatients = MyPatient::orderBy('created_at', 'desc')->paginate(10);
         return view('healthflex.doctor.doctor', compact('myPatients'));
     }
 
@@ -49,7 +49,7 @@ class DoctorController extends Controller
         ]);
 
         //handle upload file
-        if($request->hasFile('avatar')){
+        if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
             $target = public_path('healthflex_files/uploads/avatars/' . $filename);
@@ -58,21 +58,20 @@ class DoctorController extends Controller
         }
 
 
-            $user = Auth::guard('doctor')->user();
-            $user->avatar = $filename;
+        $user = Auth::guard('doctor')->user();
+        $user->avatar = $filename;
 
-            $user->name = request('name');
-            $user->speciality_title = request('speciality_title');
-            $user->phone = request('phone');
-            $user->address = request('address');
-            $user->city = request('city');
-            $user->region = request('region');
-            $user->email = request('email');
+        $user->name = request('name');
+        $user->speciality_title = request('speciality_title');
+        $user->phone = request('phone');
+        $user->address = request('address');
+        $user->city = request('city');
+        $user->region = request('region');
+        $user->email = request('email');
 
 
-            $user->save();
-            return redirect('doctor/profile-settings')->with('status', 'Profile updated!');
-
+        $user->save();
+        return redirect('doctor/profile-settings')->with('status', 'Profile updated!');
 
 
 //        return redirect('doctor/profile-settings');
@@ -94,15 +93,15 @@ class DoctorController extends Controller
                 'new_password' => 'required|string|min:6|confirmed',
                 'password_confirm' => 'required'
             ]);
-            return redirect()->back()->with("error","Your current password does not matches with the password you provided. Please try again.");
+            return redirect()->back()->with("error", "Your current password does not matches with the password you provided. Please try again.");
 
         }
         //uncomment this if you need to validate that the new password is same as old one
 
-        if(strcmp($request->get('old_password'), $request->get('new_password')) == 0){
+        if (strcmp($request->get('old_password'), $request->get('new_password')) == 0) {
             //Current password and new password are same
 
-           return redirect()->back()->with("error","New Password cannot be same as your current password. Please choose a different password.");
+            return redirect()->back()->with("error", "New Password cannot be same as your current password. Please choose a different password.");
         }
 
 

@@ -81,7 +81,7 @@
                                 </thead>
                                 <tbody>
                                 @foreach($myPatients as $patient)
-                                    @php $label = array("label-success", "label-danger", "label-warning");
+                                    @php $label = array("label-success", "label-danger", "label-warning", "label-info", "label-primary");
                                         $randLabel = array_rand($label);
                                     @endphp
                                     <tr>

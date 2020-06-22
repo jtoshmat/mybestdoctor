@@ -1,4 +1,5 @@
 @extends('healthflex.doctor.layout')
+@section('title', 'doctors Dashboard')
 @section('sub-content')
 
     <div class="row">
@@ -66,19 +67,8 @@
                 <div class="card-body ">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6">
-                            <div class="btn-group">
-                                <a href="book_appointment_material.html" id="addRow"
-                                   class="btn btn-info">
-                                    Add New <i class="fa fa-plus"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="btn-group pull-right">
-                                <a class="btn deepPink-bgcolor  btn-outline dropdown-toggle"
-                                   data-toggle="dropdown">Tools
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
+
                                 <ul class="dropdown-menu pull-right">
                                     <li>
                                         <a href="javascript:;">

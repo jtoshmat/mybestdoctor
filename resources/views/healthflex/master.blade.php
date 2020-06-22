@@ -103,7 +103,7 @@
             padding: 0 !important;
         }
     </style>
-    <link rel="stylesheet" href="public/healthflex_files/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/healthflex_files/assets/css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/all.min.css">
@@ -300,25 +300,13 @@
     <style piggy-ext="" data-styled-version="4.2.0"></style>
 
 </head>
-{{--header section ends--}}
-{{--@include('healthflex.topnav')--}}
+<body>
+@include('healthflex.topnav')
 
-<body
-    class="home page-template-default page page-id-145 theme-healthflex woocommerce-js wpb-js-composer js-comp-ver-6.1 vc_responsive sticky_header "
-    data-gr-c-s-loaded="true" style="margin-top: 120px;">
-<link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/fontawesome.min.css">
-<link rel="stylesheet" href="/healthflex_files/assets/plugins/fontawesome/css/all.min.css">
-
-<link rel="stylesheet" href="/healthflex_files/assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="/healthflex_files/assets/css/style.css">
-<link href="/healthflex_files/assets/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-<link href="/healthflex_files/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 
 <div class="overflow_wrapper">
 
-@include('healthflex.topnav')
-{{--    @include('healthflex.nav')--}}
 
 
 @yield('content')
@@ -444,8 +432,6 @@
         })
     });
 </script>
-<script src="../../../public/healthflex_files/assets/js/jquery@2.2.4/jquery.js"></script>
-<script src="public/healthflex_files/assets/js/ui/jquery-ui.min.js"></script>
 
 </body>
 </html>

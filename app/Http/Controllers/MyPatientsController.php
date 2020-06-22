@@ -33,4 +33,9 @@ class MyPatientsController extends Controller
         $myPatients = MyPatient::orderBy('created_at','desc')->paginate(7);
         return view('healthflex.doctor.schedule-timings', compact('myPatients'));
     }
+
+    public function add_patient()
+    {
+        return view('healthflex.doctor.add-patient');
+    }
 }

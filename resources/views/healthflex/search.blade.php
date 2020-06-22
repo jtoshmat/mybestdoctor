@@ -2,7 +2,8 @@
 @section('title', 'Shortcodes')
 @section('content')
 
-        <div class="head_panel">
+
+    <div class="head_panel">
             <div
                 style="background-image: url(https://plethorathemes.com/healthflex/wp-content/uploads/2013/06/doctor_blue_left.jpg)"
                 class="full_width_photo   ">
@@ -78,7 +79,7 @@
                         </div>
                         <div class="container">
 
-                            <p class="breadcrumb-title">O'zbekistonda {{ Request::get('cityKey') }} bo'ylab: {{ Request::get('key') ?? 'Doktorlar yoki Klinikalar' }}
+                            <p class="breadcrumb-title">O'zbekistonda {{ Request::get('cityKey') }} bo'ylab: {{ $doctors->total() }}ta {{ Request::get('key') ?? 'Doktorlar yoki Klinikalar' }}
                                 topildi</p>
 
                         </div>
