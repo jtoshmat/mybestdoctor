@@ -97,7 +97,8 @@ Route::prefix('doctor')->group(function() {
     Route::post('/change-password', 'DoctorController@update_password');
 
     //    add patient
-    Route::get('/add-patient', 'MyPatientsController@add_patient')->name('doctor.add-patient');
+    Route::get('/add-patient', 'MyPatientsController@add_patient');
+    Route::post('/add-patient', 'MyPatientsController@store')->name('doctor.add-patient');
 
     Route::get('/appointments', 'MyPatientsController@appointments')->name('doctor.appointments');
     Route::get('/mypatients', 'MyPatientsController@my_patients')->name('doctor.mypatients');

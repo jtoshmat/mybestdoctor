@@ -336,18 +336,18 @@
 
                         </ul>
                         <ul class="navbar-nav main-nav ml-auto">
-                            <li class="menu-item mr-4"><a title="About Us" href="/about-us/">About Us  </a></li>
-                            <li class="nav-item mr-4"><a title="Careers" href="/careers/"> Careers   </a></li>
-                            <li class="menu-item mr-4"><a title="Departments" href="/departments/">Departments</a></li>
-                            <li id="menu-item-1771" class="menu-item mr-4"><a title="Services" href="/services/">Services</a></li>
-                            <li id="menu-item-1674" class="menu-item mr-4 has-submenu"><a title="Info" href="#">Info  </a>
+                            <li class="menu-item mr-4"><a class="nav-link" title="About Us" href="/about-us/">About Us  </a></li>
+                            <li class="nav-item mr-4"><a class="nav-link" title="Careers" href="/careers/"> Careers   </a></li>
+                            <li class="menu-item mr-4"><a class="nav-link" title="Departments" href="/departments/">Departments</a></li>
+                            <li id="menu-item-1771" class="menu-item mr-4"><a class="nav-link" title="Services" href="/services/">Services</a></li>
+                            <li id="menu-item-1674" class="menu-item mr-4 has-submenu"><a class="nav-link" title="Info" href="#">Info  </a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a title="The Patient&#039;s &amp; Visitor&#039;s Guide" href="/visit-guide/">The Patient&#8217;s &#038; Visitor&#8217;s Guide</a></li>
-                                    <li id="menu-item-1767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1767"><a title="Appointment Booking" href="/appointment-booking/">Appointment Booking</a></li>
-                                    <li id="menu-item-1762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1762"><a title="Health Plans" href="/health-plans/">Health Plans</a></li>
-                                    <li id="menu-item-1761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1761"><a title="Health Library A-Z" href="/health-library/">Health Library A-Z</a></li>
-                                    <li id="menu-item-1756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1756"><a title="Fees &amp; Insurance" href="/fees-insurance/">Fees &#038; Insurance</a></li>
-                                    <li id="menu-item-1768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1768"><a title="FAQ" href="/faq/">FAQ</a></li>
+                                    <li><a class="nav-link" title="The Patient&#039;s &amp; Visitor&#039;s Guide" href="/visit-guide/">The Patient&#8217;s &#038; Visitor&#8217;s Guide</a></li>
+                                    <li id="menu-item-1767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1767"><a class="nav-link" title="Appointment Booking" href="/appointment-booking/">Appointment Booking</a></li>
+                                    <li id="menu-item-1762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1762"><a class="nav-link" title="Health Plans" href="/health-plans/">Health Plans</a></li>
+                                    <li id="menu-item-1761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1761"><a class="nav-link" title="Health Library A-Z" href="/health-library/">Health Library A-Z</a></li>
+                                    <li id="menu-item-1756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1756"><a class="nav-link" title="Fees &amp; Insurance" href="/fees-insurance/">Fees &#038; Insurance</a></li>
+                                    <li id="menu-item-1768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1768"><a class="nav-link" title="FAQ" href="/faq/">FAQ</a></li>
                                 </ul>
                             </li>
                         </ul>

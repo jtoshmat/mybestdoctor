@@ -68,7 +68,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="btn-group">
-                                <a href="book_appointment_material.html" id="addRow"
+                                <a href="{{ route('doctor.add-patient') }}" id="addRow"
                                    class="btn btn-info">
                                     Add New <i class="fa fa-plus"></i>
                                 </a>

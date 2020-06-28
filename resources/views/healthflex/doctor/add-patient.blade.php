@@ -2,15 +2,12 @@
 @section('sub-content')
 
     {{--    Profile Settings--}}
-    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-8 col-12">
-        <div class="row">
-
-        </div>
+    <div class="container-fluid">
         <div class="row">
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">
-                        <h4>Profilingiz</h4>
+                        <h4>Add Patient</h4>
                         <p class="text-muted"><span style="font-family: 'courier'"></span>
                         </p>
 
@@ -18,8 +15,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form enctype="multipart/form-data" action="{{ __('add-patients') }}" method="POST">
-                        @csrf
+                    <form enctype="multipart/form-data" action="{{ __('add-patient') }}" method="POST">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="form-group">
                                 <label for="fullName">Ism va Familiya</label>
@@ -31,12 +27,21 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="fullName">Patient ID</label>
+                                <input type="text" class="form-control pr-5 @error('id') has-error @enderror"
+                                       name="patient_id" id="patient_id"
+                                       placeholder="enter patient id" autocomplete="id">
+                                @error('id')
+                                <strong class="text-danger">{{ $message }}</strong>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label for="fullName">Type of Patient</label>
 
-                                    <select name="type_patient" class="form-control" id="">
-                                        <option value="new">New Patient</option>
-                                        <option value="old">Old Patient</option>
-                                    </select>
+                                <select name="type_patient" class="form-control" id="">
+                                    <option value="new">New Patient</option>
+                                    <option value="old">Old Patient</option>
+                                </select>
 
 
                             </div>
@@ -83,7 +88,7 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 
                             <div class="form-group">
-                                <label>">Date Of Appointment</label>
+                                <label>Date Of Appointment</label>
                                 <input type="date"
                                        class="form-control @error('date of Appointment') has-error @enderror"
                                        name="date_admit" id="date_appt"
@@ -159,12 +164,15 @@
                                 </button>
                             </div>
                         </div>
+                        @csrf
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+
     {{--    Profile settingd--}}
 
 @endsection
+
