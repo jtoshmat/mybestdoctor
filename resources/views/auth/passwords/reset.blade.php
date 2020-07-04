@@ -10,6 +10,15 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ dd('$error') }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
                         <input type="hidden" name="token" value="{{ $token }}">
 

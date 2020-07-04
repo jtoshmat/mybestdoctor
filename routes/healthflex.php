@@ -82,25 +82,36 @@ Route::get('/khursand', 'PublicController@khursand');
 Route::get('/register2', 'PublicController@register2');
 Route::get('/patient-register', 'PublicController@patientRegister');
 
-Route::get('/search', 'PublicController@search');
+
 
 Route::prefix('doctor')->group(function() {
     Route::get('/login', 'Auth\DoctorLoginController@showLoginForm')->name('doctor.login');
     Route::post('/login', 'Auth\DoctorLoginController@login')->name('doctor.login.submit');
+    Route::post('/logout', 'Auth\DoctorLoginController@logout');
     Route::get('/dashboard', 'DoctorController@index')->name('doctor.dashboard');
     Route::get('/profile-settings', 'DoctorController@profile_settings')->name('doctor.profile-settings');
     Route::post('/profile-settings', 'DoctorController@update_avatar');
-    Route::get('/appointments', 'DoctorController@appointments')->name('doctor.appointments');
-    Route::get('/my-patients', 'DoctorController@my_patients')->name('doctor.my-patients');
-    Route::get('/schedule-timings', 'DoctorController@schedule_timings')->name('doctor.schedule-timings');
+
+    // change password
+    Route::get('/change-password', 'DoctorController@change_password')->name('doctor.change-password');
+    Route::post('/change-password', 'DoctorController@update_password');
+
+    //    add patient
+    Route::get('/add-patient', 'MyPatientsController@add_patient');
+    Route::post('/add-patient', 'MyPatientsController@store')->name('doctor.add-patient');
+
+    Route::get('/appointments', 'MyPatientsController@appointments')->name('doctor.appointments');
+    Route::get('/mypatients', 'MyPatientsController@my_patients')->name('doctor.mypatients');
+    Route::get('/schedule-timings', 'MyPatientsController@schedule_timings')->name('doctor.schedule-timings');
     Route::get('/invoices', 'DoctorController@invoices')->name('doctor.invoices');
-// Password reset
+
+    // Password reset
 
     Route::any('/password/email', 'Auth\DoctorForgotPasswordController@sendResetLinkEmail')->name('doctor.password.email');
     Route::get('/password/reset', 'Auth\DoctorForgotPasswordController@showLinkRequestForm')->name('doctor.password.request');
     Route::post('/password/reset', 'Auth\DoctorResetPasswordController@reset');
     Route::get('/password/reset/{token}', 'Auth\DoctorResetPasswordController@showResetForm')->name('doctor.password.reset');
-
+// invoices and autocomplete
 });
 
 

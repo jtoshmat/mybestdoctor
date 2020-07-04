@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+
 class DoctorLoginController extends Controller
 {
     /**
@@ -13,21 +14,22 @@ class DoctorLoginController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showLoginForm()
+
+    protected function guard()
     {
-        return view('auth.doctor-login');
-    }
-    protected function guard(){
         return Auth::guard('doctor');
     }
 
+
     use AuthenticatesUsers;
+
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = '/doctor/dashboard';
+
     /**
      * Create a new controller instance.
      *
@@ -36,5 +38,18 @@ class DoctorLoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest:doctor')->except('logout');
+    }
+
+    public function showLoginForm()
+    {
+        return view('auth.doctor-login');
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+        $request->session()->invalidate();
+        return redirect('/sherzod');
+
     }
 }
