@@ -111,6 +111,6 @@
 
 
 
-    @include('healthflex.alljavascriptfiles')
+
 </div>
 </div>

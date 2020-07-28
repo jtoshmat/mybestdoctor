@@ -44,11 +44,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('patient')->group(function() {
-    Route::get('/login', 'Auth\PatientLoginController@showLoginForm')->name('patient.login');
-    Route::post('/login', 'Auth\PatientLoginController@login')->name('patient.login.submit');
-    Route::get('/home', 'PatientController@index')->name('patient.home');
-});
 
 
 Route::post('/foo', function () {

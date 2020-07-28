@@ -22,34 +22,46 @@ class MyPatientsController extends Controller
         return view( 'healthflex.doctor.mypatients', compact('myPatients'));
     }
 
+    public function invoices()
+    {
+        $myPatients = MyPatient::orderBy('created_at','desc')->paginate(7);
+        return view( 'healthflex.doctor.invoices', compact('myPatients'));
+    }
+
     public function appointments()
     {
         $myPatients = MyPatient::orderBy('created_at','desc')->paginate(7);
         return view('healthflex.doctor.appointments', compact('myPatients'));
     }
 
-    public function schedule_timings()
+
+    public function show($patient)
     {
-        $myPatients = MyPatient::orderBy('created_at','desc')->paginate(7);
-        return view('healthflex.doctor.schedule-timings', compact('myPatients'));
+        $patient = MyPatient::find($patient);
+        return view( 'healthflex.doctor.show', compact('patient'));
     }
 
     public function add_patient()
     {
         return view('healthflex.doctor.add-patient');
     }
-    public function store()
+    public function store(Request $request)
     {
-        $data = \request()->validate([
-            'name' => 'required|min:3',
-            'patient_id' => 'required|min:4',
-            'email' => 'required|unique',
+        $data = $request->validate([
+            'patient_id' => 'nullable',
+            'name' => 'required|min:3|max:20',
+            'email' => 'email:rfc,dns',
             'phone' => 'required',
             'date_birth' => 'required',
             'date_admit' => 'required',
+            'date_appt' => 'required',
+            'time_appt' => 'required',
+            'type_patient' => 'nullable',
             'condition' => 'required',
+            'price' => 'nullable',
             'address' => 'required',
-            'city' => 'required'
+            'city' => 'nullable',
+            'region' => 'nullable'
         ]);
 
 
@@ -69,8 +81,11 @@ class MyPatientsController extends Controller
         $myPatients->city = request('city');
         $myPatients->region = request('region');
         $myPatients->save();
-        return view( 'healthflex.doctor.mypatients', compact('myPatients'));
+        return redirect('doctor/mypatients')->with('status', 'New Patient added!');
+//        event(new NewPatientHasRegistered());
+//        Mail::to($myPatients->email)->send(new WelcomeNewUserMail());
 
     }
+
 
 }

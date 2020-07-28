@@ -32,6 +32,7 @@ class DoctorController extends Controller
     {
         $myPatients = MyPatient::orderBy('created_at', 'desc')->paginate(10);
         return view('healthflex.doctor.doctor', compact('myPatients'));
+
     }
 
     public function profile_settings()
@@ -41,7 +42,7 @@ class DoctorController extends Controller
 
     public function update_avatar(Request $request)
     {
-        $this->validate($request, [
+        $data = $request->validate([
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required|email|unique:users',
@@ -113,9 +114,7 @@ class DoctorController extends Controller
     }
 
 
-    public function invoices()
-    {
-        return view('healthflex.doctor.invoices');
-    }
+
+
 
 }

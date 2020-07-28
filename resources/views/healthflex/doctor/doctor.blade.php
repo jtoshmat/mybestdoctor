@@ -1,5 +1,5 @@
 @extends('healthflex.doctor.layout')
-@section('title', 'doctors Dashboard')
+@section('title', 'doctor: ' . Auth::guard('doctor')->user()->name .' Dashboard')
 @section('sub-content')
 
     <div class="row">
@@ -32,7 +32,7 @@
                                 <div class="dash-widget-info">
                                     <h6>Today Patient</h6>
                                     <h3>{{ $myPatients->count() }}</h3>
-                                    <p class="text-muted">06, Nov 2019</p>
+                                    <p class="text-muted">{{ date('m-d-y') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                 <div class="dash-widget-info">
                                     <h6>Appoinments</h6>
                                     <h3>{{ $myPatients->count('date_appt') }}</h3>
-                                    <p class="text-muted">06, Apr 2019</p>
+                                    <p class="text-muted">{{ date('m-d-y') }}</p>
                                 </div>
                             </div>
                         </div>

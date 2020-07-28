@@ -15,7 +15,7 @@ class CreateMyPatientsTable extends Migration
     {
         Schema::create('my_patients', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('patient_id');
+            $table->integer('patient_id')->unsigned();
             $table->string('name');
             $table->string('avatar')->default('default.jpg');
             $table->string('phone')->nullable();
@@ -24,7 +24,7 @@ class CreateMyPatientsTable extends Migration
             $table->string('date_admit')->nullable();
             $table->string('date_appt')->nullable();
             $table->string('time_appt')->nullable();
-            $table->string('type_patient')->nullable();
+            $table->string('type_patient')->default('New Patient');
             $table->string('condition')->nullable();
             $table->string('price')->nullable();
             $table->string('address')->nullable();

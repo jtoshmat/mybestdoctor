@@ -96,14 +96,16 @@ Route::prefix('doctor')->group(function() {
     Route::get('/change-password', 'DoctorController@change_password')->name('doctor.change-password');
     Route::post('/change-password', 'DoctorController@update_password');
 
-    //    add patient
+    //     patient
     Route::get('/add-patient', 'MyPatientsController@add_patient');
     Route::post('/add-patient', 'MyPatientsController@store')->name('doctor.add-patient');
 
     Route::get('/appointments', 'MyPatientsController@appointments')->name('doctor.appointments');
     Route::get('/mypatients', 'MyPatientsController@my_patients')->name('doctor.mypatients');
     Route::get('/schedule-timings', 'MyPatientsController@schedule_timings')->name('doctor.schedule-timings');
-    Route::get('/invoices', 'DoctorController@invoices')->name('doctor.invoices');
+    Route::get('/invoices', 'MyPatientsController@invoices')->name('doctor.invoices');
+    Route::get('/invoices/{patient}', 'MyPatientsController@show');
+
 
     // Password reset
 
@@ -112,6 +114,12 @@ Route::prefix('doctor')->group(function() {
     Route::post('/password/reset', 'Auth\DoctorResetPasswordController@reset');
     Route::get('/password/reset/{token}', 'Auth\DoctorResetPasswordController@showResetForm')->name('doctor.password.reset');
 // invoices and autocomplete
+});
+
+Route::prefix('patient')->group(function() {
+    Route::get('/login', 'Auth\PatientLoginController@showLoginForm')->name('patient.login');
+    Route::post('/login', 'Auth\PatientLoginController@login')->name('patient.login.submit');
+    Route::get('/home', 'PatientController@index')->name('patient.home');
 });
 
 
